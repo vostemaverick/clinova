@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ClinStudy - For Clinical Medicine Students</title>
+	<style>
+		body { font-family: Arial; background: #f5f7fb; margin: 0; }
+		header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
+		.search-box { text-align: center; margin: 20px; }
+		input { width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; }
+		.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
+		.card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+		.card h3 { color: #0d47a1; }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>ClinStudy.ke</h1>
+		<p>Made by Chuka CS + Clinical Medicine Students</p>
+	</header>
+
+	<div class="search-box">
+		<input type="text" id="search" placeholder="Search topic e.g., Malaria, Anatomy...">
+	</div>
+
+	<div class="cards">
+		<div class="card">
+			<h3>Malaria</h3>
+			<p>Simplified notes, drugs, and OSCE tips for Year 1.</p>
+			<a href="malaria.html">Read Now</a>
+		</div>
+		<div class="card">
+			<h3>Anemia</h3>
+			<p>Causes, types and management.</p>
+			<a href="#">Read Now</a>
+		</div>
+		<div class="card">
+			<h3>Anatomy: Upper Limb</h3>
+			<p>Diagrams + mnemonics.</p>
+			<a href="#">Read Now</a>
+		</div>
+	</div>
+</body>
+</html>

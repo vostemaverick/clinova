@@ -1,46 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Malaria - ClinStudy.ke</title>
+  <title>Malaria - Deep Notes | ClinStudy.ke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; background: #f5f7fb; margin: 0; line-height: 1.6; }
-    header { background: #0d47a1; color: white; padding: 15px; }
+    body { font-family: Arial; background: #f5f7fb; margin: 0; line-height: 1.8; color: #222; }
+    header { background: #0d47a1; color: white; padding: 15px; position: sticky; top: 0; }
     header a { color: white; text-decoration: none; }
-    .content { background: white; max-width: 800px; margin: 20px auto; padding: 25px; border-radius: 10px; }
-    h2 { color: #0d47a1; }
-    .quiz { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px; }
+    .content { background: white; max-width: 850px; margin: 20px auto; padding: 30px; border-radius: 12px; }
+    h2 { color: #0d47a1; margin-top: 0; }
+    h3 { color: #0d47a1; border-left: 4px solid #0d47a1; padding-left: 10px; margin-top: 30px; }
+    .highlight { background: #e3f2fd; padding: 12px; border-radius: 8px; }
+    .danger { background: #ffebee; border-left: 4px solid #d32f2f; padding: 12px; border-radius: 4px; }
+    .dose { background: #e8f5e9; padding: 12px; border-radius: 8px; border: 1px solid #a5d6a7; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #0d47a1; color: white; }
+    .osce { background: #fff8e1; padding: 15px; border-radius: 8px; border: 1px solid #ffecb3; }
+    .quiz button { background: #0d47a1; color: white; border: none; padding: 8px 14px; border-radius: 5px; cursor: pointer; }
   </style>
 </head>
 <body>
-  <header><a href="index.html">← Back to ClinStudy.ke</a></header>
-  <div class="content">
-    <h2>Malaria - Simplified for Year 1</h2>
-    <p><b>Writer:</b> Rita - Clinical Medicine</p>
-    
-    <h3>1. Definition</h3>
-    <p>Malaria is caused by Plasmodium parasite, transmitted by female Anopheles mosquito.</p>
-    
-    <h3>2. Types in Kenya</h3>
+<header><a href="index.html">← Back to ClinStudy.ke</a></header>
+<div class="content">
+  <span style="background:#0d47a1; color:white; padding:4px 12px; border-radius:20px; font-size:13px;">Microbiology • Year 1 • High Yield</span>
+  <h2>Malaria - Complete Clinical Notes (Kenya Guidelines 2023)</h2>
+  <p><b>Writer:</b> Rita - Clinical Medicine Chuka | <b>Reviewed:</b> Based on Kenya National Malaria Guidelines</p>
+
+  <h3>1. Definition & Epidemiology in Kenya</h3>
+  <p>Protozoal disease caused by <b>Plasmodium spp.</b> transmitted by bite of infected female <b>Anopheles</b> mosquito. Endemic in Nyanza, Western, Coast. P. falciparum causes 98% of cases in Kenya and all severe cases.</p>
+
+  <h3>2. Etiology</h3>
+  <table>
+    <tr><th>Species</th><th>Feature</th><th>Relapse?</th></tr>
+    <tr><td>P. falciparum</td><td>Most severe, high parasitemia, cerebral malaria</td><td>No</td></tr>
+    <tr><td>P. vivax & P. ovale</td><td>Milder, dormant hypnozoites in liver</td><td>Yes</td></tr>
+    <tr><td>P. malariae</td><td>Chronic, nephrotic syndrome</td><td>No</td></tr>
+  </table>
+
+  <h3>3. Life Cycle (For OSCE)</h3>
+  <p><b>Mosquito → Sporozoites → Liver (schizonts) → Merozoites → RBCs → Trophozoite → Schizont → Rupture → Fever cycle.</b> In P. vivax/ovale, some become hypnozoites sleeping in liver causing relapse months later.</p>
+  <div class="highlight"><b>Why fever is intermittent?</b> RBC rupture releases toxins → cytokines → hypothalamus raises temp. Falciparum rupture is irregular = daily fever. Vivax/ovale = every 48hrs (tertian), Malariae = 72hrs (quartan).</div>
+
+  <h3>4. Pathophysiology</h3>
+  <ul>
+    <li>Infected RBCs stick to endothelium (cytoadherence) → blocks capillaries in brain, placenta, kidney = cerebral malaria, AKI</li>
+    <li>Hemolysis → anemia, jaundice, dark urine (blackwater fever)</li>
+    <li>Cytokine storm → fever, rigors, hypoglycemia</li>
+  </ul>
+
+  <h3>5. Clinical Features</h3>
+  <p><b>Uncomplicated:</b> Fever/chills/rigors (classic paroxysm: cold-hot-sweating), headache, joint pains, vomiting, malaise. No organ dysfunction.</p>
+  <div class="danger"><b>Severe Malaria (WHO Criteria) - Any ONE = Severe:</b>
     <ul>
-      <li>P. falciparum - Most common & dangerous</li>
-      <li>P. vivax, P. ovale, P. malariae</li>
+      <li>Cerebral: Altered consciousness, seizures, coma (GCS <11)</li>
+      <li>Severe anemia: Hb <5 g/dl</li>
+      <li>AKI: Creatinine >265 umol/L or oliguria</li>
+      <li>Jaundice + parasitemia, Hypoglycemia <2.2 mmol/L</li>
+      <li>Acidosis, Pulmonary edema, Shock, Bleeding/DIC, Hb in urine</li>
+      <li>Hyperparasitemia >10%</li>
     </ul>
-
-    <h3>3. Signs & Symptoms</h3>
-    <ul>
-      <li>Fever, chills, headache, joint pains</li>
-      <li>Vomiting, anemia in severe cases</li>
-    </ul>
-
-    <h3>4. Management (Kenya Guidelines)</h3>
-    <p>Uncomplicated: AL - Artemether Lumefantrine</p>
-    <p>Severe: IV Artesunate</p>
-
-    <div class="quiz">
-      <h3>Quick Quiz</h3>
-      <p>1. Vector for malaria? <br> A) Male Anopheles B) Female Anopheles C) Aedes</p>
-      <p><i>Answer: B </i></p>
-    </div>
   </div>
+
+  <h3>6. Investigations</h3>
+  <ul>
+    <li><b>Gold standard:</b> Thick & thin blood film - Thick for detection, Thin for species</li>
+    <li>RDT - HRP2 for falciparum (can stay positive 2 weeks after treatment)</li>
+    <li>Hb, Platelets (low), Bilirubin (high), Creatinine, Glucose, LFTs</li>
+    <li>In pregnancy: Always test any fever in endemic area</li>
+  </ul>
+
+  <h3>7. Differential Diagnosis</h3>
+  <p>Typhoid, Dengue, Brucellosis, Sepsis, Meningitis, UTI - All cause fever. Always do malaria test, don't treat blindly.</p>
+
+  <h3>8. Management - Kenya Guidelines</h3>
+  <div class="dose">
+    <b>Uncomplicated Malaria (No danger signs):</b><br>
+    First line: <b>Artemether-Lumefantrine (AL / Coartem)</b><br>
+    Dose: 4 tablets twice daily x 3 days (adult >35kg). Take with fatty meal/milk.<br>
+    Weight bands: 5-14kg=1 tab, 15-24kg=2 tabs, 25-34kg=3 tabs<br><br>
+    Second line if AL fails: Dihydroartemisinin-Piperaquine (DHA-PPQ)<br><br>
+    <b>In pregnancy 1st trimester:</b> Quinine + Clindamycin. 2nd/3rd trimester: AL is safe.<br>
+    P. vivax/ovale: Add Primaquine 0.25mg/kg daily x 14 days (check G6PD first!)
+  </div>
+  <br>
+  <div class="danger">
+    <b>Severe Malaria = EMERGENCY - Refer + Start:</b><br>
+    1. IV Artesunate 2.4mg/kg at 0hr, 12hr, 24hr, then daily. (3mg/kg if <20kg)<br>
+    2. When can swallow, complete with full AL dose<br>
+    3. If no Artesunate: IM Artemether or IV Quinine<br>
+    4. Supportive: Check glucose 4-hourly, manage fever, transfusion if Hb<5, fluids carefully (risk pulmonary edema)<br>
+    <b>NEVER give IM injection or NSAID in severe malaria</b>
+  </div>
+
+  <h3>9. Complications</h3>
+  <p>Cerebral malaria, Severe anemia, AKI, Pulmonary edema, Hypoglycemia, Death if untreated</p>
+
+  <h3>10. Prevention</h3>
+  <p>ITN (LLIN), IRS, IPTp in pregnancy (SP), Chemoprophylaxis for travelers, Environmental - drain stagnant water</p>
+
+  <div class="osce">
+    <h3>🔥 OSCE / Viva - Lecturers Love These</h3>
+    <p><b>Q1:</b> Why AL is given with fatty meal? <br><b>A:</b> Lumefantrine absorption increases 16x with fat.</p>
+    <p><b>Q2:</b> Why not give Primaquine without G6PD test? <br><b>A:</b> Causes severe hemolysis in G6PD deficient.</p>
+    <p><b>Q3:</b> Patient with malaria Hb 4g/dl, what next? <br><b>A:</b> Transfuse, but also investigate cause of severe anemia - it's severe malaria.</p>
+    <p><b>Past Paper 2024 Chuka:</b> "Discuss management of 2yr old with convulsions and positive RDT" - Answer = Severe malaria with cerebral features → IV Artesunate + manage seizure with diazepam + check glucose.</p>
+  </div>
+
+  <div class="quiz">
+    <h3>Test Yourself</h3>
+    <p>Child 18kg with uncomplicated malaria - how many AL tabs per dose?</p>
+    <button onclick="alert('2 tablets twice daily x 3 days = total 12 tablets')">Show Answer</button>
+  </div>
+
+</div>
+<a href="https://wa.me/2547XXXXXXXX" style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:28px;">💬</a>
 </body>
-</html
+</html>

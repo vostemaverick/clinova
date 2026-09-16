@@ -1,94 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ClinStudy.ke - For Chuka Clinical Medicine</title>
+  <title>ClinStudy.ke - Clinical Medicine Notes Chuka University</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deep clinical notes for Chuka University Clinical Medicine - Malaria, Anemia, Anatomy. By Rita & Team.">
   <style>
-    body { font-family: Arial; background: #f5f7fb; margin: 0; }
-    header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
-    .search-box { text-align: center; margin: 20px; }
-    input { width: 80%; max-width: 500px; padding: 14px; border-radius: 25px; border: 1px solid #ccc; font-size: 16px; }
-    .filters { text-align: center; margin-bottom: 10px; }
-    .filters button { padding: 8px 16px; margin: 5px; border-radius: 20px; border: 1px solid #0d47a1; background: white; color: #0d47a1; cursor: pointer; }
-    .filters button.active { background: #0d47a1; color: white; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
-    .card { background: white; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .card h3 { color: #0d47a1; margin-top: 0; }
-    .tag { background: #e3f2fd; color: #0d47a1; padding: 3px 8px; border-radius: 10px; font-size: 12px; }
-    .request { background: white; max-width: 600px; margin: 30px auto; padding: 20px; border-radius: 12px; text-align: center; }
+    body{font-family:Arial;margin:0;background:#f5f7fb;color:#222;line-height:1.7}
+    header{background:#0d47a1;color:white;padding:18px 20px;position:sticky;top:0;z-index:10}
+    header h1{margin:0;font-size:22px}
+    header p{margin:4px 0 0;opacity:0.9;font-size:14px}
+    .hero{background:linear-gradient(135deg,#0d47a1,#1976d2);color:white;padding:40px 20px;text-align:center}
+    .hero h2{margin:0;font-size:28px}
+    .hero p{max-width:700px;margin:12px auto;opacity:0.95}
+    .container{max-width:1100px;margin:20px auto;padding:0 15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:white;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(0,0,0,0.1)}
+    .tag{background:#e3f2fd;color:#0d47a1;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:bold}
+    .card h3{margin:12px 0 6px;color:#0d47a1}
+    .card p{font-size:14px;color:#555}
+    .card a{display:inline-block;margin-top:10px;background:#0d47a1;color:white;padding:9px 18px;border-radius:25px;text-decoration:none;font-weight:bold;font-size:14px}
+    .about{background:white;max-width:1100px;margin:25px auto;padding:25px;border-radius:14px}
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:30px;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:99}
+    footer{text-align:center;padding:20px;color:#777;font-size:13px}
   </style>
 </head>
 <body>
-  <header>
-    <h1>ClinStudy.ke</h1>
-    <p>Notes by Clinical Medicine Students, for Students | Chuka University</p>
-  </header>
+<header>
+  <h1>ClinStudy.ke 🩺</h1>
+  <p>Clinical Medicine - Chuka University | By Rita & Team - Year 1 Deep Notes</p>
+</header>
 
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Search e.g., malaria, anatomy, anemia..." onkeyup="filterCards()">
+<div class="hero">
+  <h2>Pass Your CATs & OSCE - Deep Notes</h2>
+  <p>No shallow summaries. Doses, OSCE questions, past papers, Kenya guidelines. Made for Clinical Medicine students who want to actually understand.</p>
+  <p style="margin-top:18px;"><a href="https://wa.me/254792117442?text=Hi%20ClinStudy%2C%20I%20need%20notes%20on%20" style="background:#25D366;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;">💬 WhatsApp Us: 0792 117 442</a></p>
+</div>
+
+<div class="container">
+  <div class="card">
+    <span class="tag">MICROBIOLOGY • DEEP</span>
+    <h3>🦠 Malaria</h3>
+    <p>Complete with WHO severe criteria, life cycle, AL doses by weight, IV Artesunate, OSCE viva. Kenya Guidelines 2023.</p>
+    <a href="malaria.html">Read Deep Notes →</a>
   </div>
 
-  <div class="filters">
-    <button class="active" onclick="filterBy('all', this)">All</button>
-    <button onclick="filterBy('Microbiology', this)">Microbiology</button>
-    <button onclick="filterBy('Anatomy', this)">Anatomy</button>
-    <button onclick="filterBy('Physiology', this)">Physiology</button>
+  <div class="card">
+    <span class="tag">PHYSIOLOGY • DEEP</span>
+    <h3>🩸 Anemia</h3>
+    <p>Micro/normo/macrocytic table, labs interpretation, Iron/B12/Folate doses, when to transfuse, pica & koilonychia.</p>
+    <a href="anemia.html">Read Deep Notes →</a>
   </div>
 
-  <div class="cards" id="cards">
-    <div class="card" data-category="Microbiology">
-      <span class="tag">Microbiology</span>
-      <h3>Malaria</h3>
-      <p>Simplified notes, drugs, OSCE tips - By Rita</p>
-      <a href="malaria.html">Read Now →</a>
-    </div>
-    <div class="card" data-category="Physiology">
-      <span class="tag">Physiology</span>
-      <h3>Anemia</h3>
-      <p>Causes, types, classification & management</p>
-      <a href="anemia.html">Read Now →</a>
-    </div>
-    <div class="card" data-category="Anatomy">
-      <span class="tag">Anatomy</span>
-      <h3>Upper Limb</h3>
-      <p>Bones, muscles, nerves with mnemonics</p>
-      <a href="upper-limb.html">Read Now →</a>
-    </div>
-    <div class="card" data-category="Microbiology">
-      <span class="tag">Microbiology</span>
-      <h3>Typhoid</h3>
-      <p>Widal test, presentation & treatment</p>
-      <a href="#">Coming Soon</a>
-    </div>
+  <div class="card">
+    <span class="tag">ANATOMY • DEEP</span>
+    <h3>💪 Upper Limb</h3>
+    <p>Brachial plexus, nerve injuries (wrist drop, claw hand, ape hand), carpals mnemonic, Erb's vs Klumpke's, OSCE exam.</p>
+    <a href="upper-limb.html">Read Deep Notes →</a>
   </div>
+</div>
 
-  <div class="request">
-    <h3>Can't find a topic?</h3>
-    <p>WhatsApp us: +254792117442 | We will add it in 24hrs</p>
-  </div>
+<div class="about">
+  <h3 style="color:#0d47a1;margin-top:0;">Why ClinStudy.ke?</h3>
+  <p>Most sites give shallow notes. We give what lecturers test: <b>doses, lab values, OSCE tricks, past papers.</b> Notes written by top students and checked against Kenya MOH guidelines.</p>
+  <p>Need a topic? WhatsApp us - we add in 24hrs.</p>
+  <p><b>Contact:</b> <a href="https://wa.me/254792117442?text=Hi%20ClinStudy" style="color:#25D366;font-weight:bold;text-decoration:none;">0792117442 on WhatsApp</a> | Email: clinstudy.ke@gmail.com</p>
+</div>
 
-<script>
-function filterCards() {
-  let input = document.getElementById('search').value.toLowerCase();
-  let cards = document.getElementsByClassName('card');
-  for (let card of cards) {
-    let text = card.innerText.toLowerCase();
-    card.style.display = text.includes(input) ? "" : "none";
-  }
-}
-function filterBy(category, btn) {
-  document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  let cards = document.getElementsByClassName('card');
-  for (let card of cards) {
-    if (category === 'all' || card.dataset.category === category) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
-  }
-}
-</script>
-<a href="https://wa.me/254745123456" style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:28px;">💬</a>
+<a href="https://wa.me/254792117442?text=Hi%20ClinStudy%2C%20I%20need%20help%20with%20" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+<footer>© 2026 vostemaverick + rita
+</footer>
 </body>
 </html>

@@ -1,43 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ClinStudy - For Clinical Medicine Students</title>
+  <title>ClinStudy.ke - For Chuka Clinical Medicine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial; background: #f5f7fb; margin: 0; }
     header { background: #0d47a1; color: white; padding: 20px; text-align: center; }
     .search-box { text-align: center; margin: 20px; }
-    input { width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
-    .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .card h3 { color: #0d47a1; }
+    input { width: 80%; max-width: 500px; padding: 14px; border-radius: 25px; border: 1px solid #ccc; font-size: 16px; }
+    .filters { text-align: center; margin-bottom: 10px; }
+    .filters button { padding: 8px 16px; margin: 5px; border-radius: 20px; border: 1px solid #0d47a1; background: white; color: #0d47a1; cursor: pointer; }
+    .filters button.active { background: #0d47a1; color: white; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
+    .card { background: white; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .card h3 { color: #0d47a1; margin-top: 0; }
+    .tag { background: #e3f2fd; color: #0d47a1; padding: 3px 8px; border-radius: 10px; font-size: 12px; }
+    .request { background: white; max-width: 600px; margin: 30px auto; padding: 20px; border-radius: 12px; text-align: center; }
   </style>
 </head>
 <body>
   <header>
     <h1>ClinStudy.ke</h1>
-    <p>Made by maverick + Clinical Medicine(Rita)</p>
+    <p>Notes by Clinical Medicine Students, for Students | Chuka University</p>
   </header>
 
   <div class="search-box">
-    <input type="text" id="search" placeholder="Search topic e.g., Malaria, Anatomy...">
+    <input type="text" id="search" placeholder="Search e.g., malaria, anatomy, anemia..." onkeyup="filterCards()">
   </div>
 
-  <div class="cards">
-    <div class="card">
+  <div class="filters">
+    <button class="active" onclick="filterBy('all', this)">All</button>
+    <button onclick="filterBy('Microbiology', this)">Microbiology</button>
+    <button onclick="filterBy('Anatomy', this)">Anatomy</button>
+    <button onclick="filterBy('Physiology', this)">Physiology</button>
+  </div>
+
+  <div class="cards" id="cards">
+    <div class="card" data-category="Microbiology">
+      <span class="tag">Microbiology</span>
       <h3>Malaria</h3>
-      <p>Simplified notes, drugs, and OSCE tips for Year 1.</p>
-      <a href="malaria.html">Read Now</a>
+      <p>Simplified notes, drugs, OSCE tips - By Rita</p>
+      <a href="malaria.html">Read Now →</a>
     </div>
-    <div class="card">
+    <div class="card" data-category="Physiology">
+      <span class="tag">Physiology</span>
       <h3>Anemia</h3>
-      <p>Causes, types and management.</p>
-      <a href="#">Read Now</a>
+      <p>Causes, types, classification & management</p>
+      <a href="anemia.html">Read Now →</a>
     </div>
-    <div class="card">
-      <h3>Anatomy: Upper Limb</h3>
-      <p>Diagrams + mnemonics.</p>
-      <a href="#">Read Now</a>
+    <div class="card" data-category="Anatomy">
+      <span class="tag">Anatomy</span>
+      <h3>Upper Limb</h3>
+      <p>Bones, muscles, nerves with mnemonics</p>
+      <a href="upper-limb.html">Read Now →</a>
+    </div>
+    <div class="card" data-category="Microbiology">
+      <span class="tag">Microbiology</span>
+      <h3>Typhoid</h3>
+      <p>Widal test, presentation & treatment</p>
+      <a href="#">Coming Soon</a>
     </div>
   </div>
+
+  <div class="request">
+    <h3>Can't find a topic?</h3>
+    <p>WhatsApp us: 07XX XXX XXX | We will add it in 24hrs</p>
+  </div>
+
+<script>
+function filterCards() {
+  let input = document.getElementById('search').value.toLowerCase();
+  let cards = document.getElementsByClassName('card');
+  for (let card of cards) {
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(input) ? "" : "none";
+  }
+}
+function filterBy(category, btn) {
+  document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  let cards = document.getElementsByClassName('card');
+  for (let card of cards) {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 </html>

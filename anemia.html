@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Anemia - ClinStudy.ke</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body { font-family: Arial; background: #f5f7fb; margin: 0; line-height: 1.7; }
-		header { background: #0d47a1; color: white; padding: 15px; }
-		header a { color: white; text-decoration: none; }
-		.content { background: white; max-width: 800px; margin: 20px auto; padding: 25px; border-radius: 12px; }
-		h2 { color: #0d47a1; } h3 { color: #333; border-bottom: 2px solid #e3f2fd; padding-bottom: 5px; }
-		.quiz { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px; }
-		button { background: #0d47a1; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-	</style>
+  <title>Anemia Deep Notes | ClinStudy.ke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{font-family:Arial;background:#f5f7fb;margin:0;line-height:1.8;color:#222}
+    header{background:#0d47a1;color:white;padding:15px;position:sticky;top:0}
+    header a{color:white;text-decoration:none}
+    .content{background:white;max-width:850px;margin:20px auto;padding:30px;border-radius:12px}
+    h2{color:#0d47a1} h3{color:#0d47a1;border-left:4px solid #0d47a1;padding-left:10px;margin-top:28px}
+    .highlight{background:#e3f2fd;padding:12px;border-radius:8px}
+    .danger{background:#ffebee;border-left:4px solid #d32f2f;padding:12px;border-radius:4px}
+    .dose{background:#e8f5e9;padding:12px;border-radius:8px;border:1px solid #a5d6a7}
+    table{width:100%;border-collapse:collapse;margin:15px 0} th,td{border:1px solid #ddd;padding:10px;text-align:left} th{background:#0d47a1;color:white}
+    .osce{background:#fff8e1;padding:15px;border-radius:8px;border:1px solid #ffecb3}
+  </style>
 </head>
 <body>
-	<header><a href="index.html">← Back</a></header>
-	<div class="content">
-		<span style="background:#e3f2fd; padding:4px 10px; border-radius:15px;">Physiology</span>
-		<h2>Anemia - Simplified</h2>
-		<p><b>By:</b> Rita | <b>Year 1</b> | Updated: Today</p>
+<header><a href="index.html">← Back</a></header>
+<div class="content">
+  <span style="background:#0d47a1;color:white;padding:4px 12px;border-radius:20px;font-size:13px;">Physiology & Pathology • Year 1 • Exam Heavy</span>
+  <h2>Anemia - Complete Notes (With Labs & Doses)</h2>
 
-		<h3>Definition</h3>
-		<p>Low hemoglobin / low RBCs leading to reduced oxygen carrying capacity.</p>
+  <h3>1. Definition</h3>
+  <p>Hb below normal for age/sex: <b>Men <13 g/dl, Women <12 g/dl, Pregnant <11 g/dl, Child <11 g/dl</b>. Results in reduced O2 delivery to tissues.</p>
 
-		<h3>Classification</h3>
-		<ul>
-			<li><b>By size (MCV):</b> Microcytic (Iron def), Normocytic (Bleeding), Macrocytic (B12 def)</li>
-			<li><b>By cause:</b> Blood loss, Decreased production, Increased destruction</li>
-		</ul>
+  <h3>2. Classification - This is what lecturers test</h3>
+  <table>
+    <tr><th>MCV</th><th>Type</th><th>Causes (Kenya Common)</th><th>Key Lab</th></tr>
+    <tr><td><60-80</td><td>Microcytic</td><td>Iron deficiency (most common), Thalassemia, Sideroblastic, Chronic disease</td><td>Low Ferritin, Low Serum Iron</td></tr>
+    <tr><td>80-100</td><td>Normocytic</td><td>Acute bleeding, CKD, Aplastic anemia, Hemolysis</td><td>Retic high if bleeding/hemolysis</td></tr>
+    <tr><td>>100</td><td>Macrocytic</td><td>B12 deficiency, Folate deficiency, Alcohol, Hypothyroid, Drugs (MTX)</td><td>High MCV, Hypersegmented neutrophils</td></tr>
+  </table>
 
-		<h3>Signs</h3>
-		<p>Fatigue, pallor, dizziness, tachycardia, shortness of breath on exertion</p>
+  <h3>3. Pathophysiology</h3>
+  <ul>
+    <li><b>Iron Def:</b> No iron → no heme → small pale RBCs. Cause in Kenya: Hookworms, poor diet, menorrhagia, pregnancy</li>
+    <li><b>B12/Folate:</b> Needed for DNA synthesis → RBC nucleus doesn't mature → big RBCs (megaloblastic)</li>
+    <li><b>Hemolysis:</b> RBCs destroyed early (sickle cell, malaria, autoimmune) → marrow tries to compensate → retics ↑</li>
+  </ul>
 
-		<h3>Management</h3>
-		<p>Treat cause + Iron (Ferrous sulphate), B12, Folate, Transfusion if severe</p>
+  <h3>4. Clinical Features</h3>
+  <p><b>General:</b> Fatigue, pallor (conjunctiva, palms), dizziness, palpitations, SOB on exertion, headache, tinnitus</p>
+  <p><b>Specific signs:</b></p>
+  <ul>
+    <li>Iron: Spoon nails (koilonychia), angular cheilitis, pica (eating soil)</li>
+    <li>B12: Glossitis (beefy tongue), peripheral neuropathy, subacute combined degeneration of cord</li>
+    <li>Hemolysis: Jaundice, splenomegaly, dark urine</li>
+    <li>Severe: Heart failure, tachycardia, systolic murmur</li>
+  </ul>
 
-		<div class="quiz">
-			<h3>Quick Check</h3>
-			<p><b>Q:</b> Most common cause of microcytic anemia in Kenya?</p>
-			<button onclick="this.innerText='Answer: Iron deficiency'">Show Answer</button>
-		</div>
-	</div>
+  <h3>5. Investigations - Stepwise</h3>
+  <div class="highlight">
+    <b>Step 1:</b> CBC + MCV + Retic count → Classify by MCV<br>
+    <b>Step 2:</b> If microcytic → Serum Ferritin, Iron studies, Stool for occult blood & ova (hookworm)<br>
+    <b>Step 3:</b> If macrocytic → B12, Folate, TSH, LFTs<br>
+    <b>Step 4:</b> If hemolysis suspected → LDH ↑, Bilirubin ↑ (indirect), Haptoglobin ↓, Blood film (sickle cells, spherocytes)<br>
+    <b>Always in Kenya:</b> Malaria test, HIV test, Stool microscopy
+  </div>
+
+  <h3>6. Management (Kenya MOH Guidelines)</h3>
+  <div class="dose">
+    <b>A) Iron Deficiency:</b><br>
+    Ferrous sulphate 200mg TDS (60mg elemental iron) x 3 months AFTER Hb normal. Give with Vitamin C, empty stomach. Counsel about black stool & constipation. Treat cause - deworm with Albendazole 400mg stat, treat menorrhagia.<br>
+    Diet: Liver, beans, green veggies, fortified flour<br>
+    If severe/intolerant: Iron sucrose IV<br><br>
+    <b>B) Megaloblastic:</b><br>
+    B12 deficiency: Hydroxocobalamin 1mg IM daily x 5 days then monthly. If diet related - oral B12 50mcg daily.<br>
+    Folate: Folic acid 5mg daily x 4 months. NEVER give folate alone if B12 low - will worsen neuro damage<br><br>
+    <b>C) Sickle Cell / Hemolysis:</b><br>
+    Folic acid 5mg daily lifelong, Hydroxyurea, Avoid triggers, Transfuse if crisis
+  </div>
+
+  <div class="danger">
+    <b>When to Transfuse? (Not every low Hb!)</b><br>
+    - Hb <4 g/dl regardless of symptoms<br>
+    - Hb <5 g/dl with signs of heart failure<br>
+    - Hb <6 g/dl in pregnancy<br>
+    - Symptomatic + ongoing bleeding<br>
+    Use packed cells, not whole blood. Transfuse slowly + give Furosemide to avoid overload.
+  </div>
+
+  <div class="osce">
+    <h3>🔥 OSCE / Viva Must-Know</h3>
+    <p><b>Q:</b> Woman Hb 8, MCV 68, Ferritin low. Diagnosis & why pica? <br><b>A:</b> Iron deficiency anemia. Pica due to iron deficiency - craving for non-food.</p>
+    <p><b>Q:</b> How to differentiate Iron def vs Thalassemia both microcytic?<br><b>A:</b> Iron def: Low ferritin, high RDW. Thalassemia: Normal ferritin, normal RDW, family history, Mentzer index <13</p>
+    <p><b>Past Paper Chuka 2024:</b> "30yr old vegan with fatigue, tingling feet, MCV 110" - Answer = B12 deficiency from vegan diet → do B12 level, give IM B12.</p>
+  </div>
+</div>
+<a href="https://wa.me/254792117442" style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:28px;">💬</a>
 </body>
 </html>

@@ -1,0 +1,22 @@
+.coverage {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5eaf1;
+}
+
+.coverage h4 {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.coverage ul {
+  margin: 0;
+  padding-left: 19px;
+  color: #555;
+  font-size: 13px;
+}
+
+.coverage li {
+  padding: 2px 0;
+}

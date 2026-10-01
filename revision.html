@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flashcards and self-tests for ClinStudy Clinical Medicine topics.">
+  <title>Revision Studio | ClinStudy.ke</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="notes-page">
+  <header class="notes-header">
+    <a href="index.html">← ClinStudy.ke</a>
+    <span>Revision Studio</span>
+  </header>
+  <main class="revision-page">
+    <div class="revision-heading">
+      <div>
+        <p class="topic-meta">CLINICAL MEDICINE | STUDY TOOLS</p>
+        <h1>Revision Studio</h1>
+      </div>
+      <a class="revision-home-link" href="index.html">Browse topics</a>
+    </div>
+
+    <section class="revision-controls" aria-label="Revision filters">
+      <label class="revision-filter">
+        <span>Topic</span>
+        <select id="topic-filter">
+          <option value="all">All topics</option>
+        </select>
+      </label>
+      <div class="revision-mode" role="group" aria-label="Study mode">
+        <button type="button" data-mode="flashcard" aria-pressed="true">Flashcards</button>
+        <button type="button" data-mode="self-test" aria-pressed="false">Self-test</button>
+      </div>
+      <button type="button" id="saved-filter" class="revision-secondary" aria-pressed="false">Saved only</button>
+      <button type="button" id="shuffle-button" class="revision-secondary">Shuffle</button>
+    </section>
+
+    <section class="revision-progress" aria-label="Study progress">
+      <p id="session-count">Loading questions...</p>
+      <p id="progress-count">0 mastered | 0 saved</p>
+      <progress id="progress-bar" value="0" max="1" aria-label="Mastered questions"></progress>
+    </section>
+
+    <article id="study-card" class="study-card" hidden>
+      <div class="study-card-meta">
+        <span id="card-topic" class="tag"></span>
+        <span id="card-type" class="card-type"></span>
+      </div>
+      <h2 id="card-question"></h2>
+      <label id="answer-input-label" class="answer-input-label" for="answer-input" hidden>Your answer</label>
+      <textarea id="answer-input" rows="3" placeholder="Write or think through your answer before revealing it." hidden></textarea>
+      <div id="card-answer" class="card-answer" hidden></div>
+      <p id="card-source" class="card-source"></p>
+      <div class="study-actions">
+        <button type="button" id="reveal-button" class="revision-primary">Show answer</button>
+        <button type="button" id="again-button" class="revision-secondary" hidden>Review again</button>
+        <button type="button" id="known-button" class="revision-primary" hidden>Got it</button>
+        <button type="button" id="bookmark-button" class="bookmark-button" aria-pressed="false" title="Save this question">☆ Save</button>
+      </div>
+      <a id="source-link" class="source-link" href="topic.html">Open topic notes →</a>
+    </article>
+
+    <div id="empty-state" class="revision-empty" hidden>
+      <h2>No questions in this view</h2>
+      <p>Choose another topic or switch study mode.</p>
+    </div>
+    <p id="revision-status" class="revision-status" role="status" aria-live="polite"></p>
+
+    <nav class="revision-navigation" aria-label="Question navigation">
+      <button type="button" id="previous-button" class="revision-secondary">← Previous</button>
+      <button type="button" id="next-button" class="revision-secondary">Next →</button>
+    </nav>
+
+    <p class="guideline-note">Question answers are drawn from the linked study notes. For clinical practice, check the current Kenya Ministry of Health guidance and local protocols. <a href="https://guidelines.health.go.ke/" target="_blank" rel="noopener noreferrer">Kenya MOH guideline portal</a></p>
+  </main>
+
+  <script>
+    const storageKey = 'clinstudy-revision-v1';
+    const topicFilter = document.getElementById('topic-filter');
+    const modeButtons = document.querySelectorAll('[data-mode]');
+    const studyCard = document.getElementById('study-card');
+    const emptyState = document.getElementById('empty-state');
+    const questionElement = document.getElementById('card-question');
+    const answerElement = document.getElementById('card-answer');
+    const sourceElement = document.getElementById('card-source');
+    const sourceLink = document.getElementById('source-link');
+    const answerInput = document.getElementById('answer-input');
+    const answerInputLabel = document.getElementById('answer-input-label');
+    const revealButton = document.getElementById('reveal-button');
+    const againButton = document.getElementById('again-button');
+    const knownButton = document.getElementById('known-button');
+    const bookmarkButton = document.getElementById('bookmark-button');
+    const previousButton = document.getElementById('previous-button');
+    const nextButton = document.getElementById('next-button');
+    const statusElement = document.getElementById('revision-status');
+    const sessionCount = document.getElementById('session-count');
+    const progressCount = document.getElementById('progress-count');
+    const progressBar = document.getElementById('progress-bar');
+    const savedFilter = document.getElementById('saved-filter');
+    const shuffleButton = document.getElementById('shuffle-button');
+
+    let topics = [];
+    let cards = [];
+    let baseCards = [];
+    let visibleCards = [];
+    let currentIndex = 0;
+    let mode = 'flashcard';
+    let savedOnly = false;
+    let shuffled = false;
+    let state = { mastered: {}, bookmarks: {} };
+
+    try {
+      const storedState = JSON.parse(localStorage.getItem(storageKey) || '{}');
+      state = {
+        mastered: storedState.mastered && typeof storedState.mastered === 'object' ? storedState.mastered : {},
+        bookmarks: storedState.bookmarks && typeof storedState.bookmarks === 'object' ? storedState.bookmarks : {}
+      };
+    } catch (error) {
+      localStorage.removeItem(storageKey);
+    }
+
+    function saveState() {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    }
+
+    function makeSlug(value) {
+      return value.toLocaleLowerCase()
+        .normalize('NFKD')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+
+    function makeCardId(topicId, question) {
+      return `${topicId}:${makeSlug(question)}`;
+    }
+
+    function makeSectionId(topicId, heading) {
+      return `${topicId}-${makeSlug(heading)}`;
+    }
+
+    function collectCards(topic) {
+      topic.sections.forEach((section) => {
+        section.blocks.forEach((block) => {
+          if (block.type === 'qa') {
+            block.items.forEach((item) => cards.push({
+              id: makeCardId(topic.id, item.question),
+              topicId: topic.id,
+              topicTitle: topic.title,
+              subject: topic.subject,
+              section: section.heading,
+              sectionId: makeSectionId(topic.id, section.heading),
+              kind: 'flashcard',
+              question: item.question,
+              answer: item.answer
+            }));
+          }
+          if (block.type === 'quiz') {
+            cards.push({
+              id: makeCardId(topic.id, block.question),
+              topicId: topic.id,
+              topicTitle: topic.title,
+              subject: topic.subject,
+              section: section.heading,
+              sectionId: makeSectionId(topic.id, section.heading),
+              kind: 'self-test',
+              question: block.question,
+              answer: block.answer
+            });
+          }
+        });
+      });
+    }
+
+    function setMode(nextMode) {
+      mode = nextMode;
+      modeButtons.forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+      });
+      currentIndex = 0;
+      updateView();
+    }
+
+    function getVisibleCards() {
+      const selectedTopic = topicFilter.value;
+      return cards.filter((card) => {
+        const matchesTopic = selectedTopic === 'all' || card.topicId === selectedTopic;
+        const matchesMode = card.kind === mode;
+        const matchesSaved = !savedOnly || Boolean(state.bookmarks[card.id]);
+        return matchesTopic && matchesMode && matchesSaved;
+      });
+    }
+
+    function updateProgress() {
+      const masteredCount = Object.values(state.mastered).filter(Boolean).length;
+      const bookmarkCount = Object.values(state.bookmarks).filter(Boolean).length;
+      progressCount.textContent = `${masteredCount} mastered | ${bookmarkCount} saved`;
+      progressBar.max = Math.max(cards.length, 1);
+      progressBar.value = masteredCount;
+    }
+
+    function updateView() {
+      visibleCards = getVisibleCards();
+      currentIndex = Math.min(currentIndex, Math.max(visibleCards.length - 1, 0));
+      const currentCard = visibleCards[currentIndex];
+      const hasCard = Boolean(currentCard);
+      studyCard.hidden = !hasCard;
+      emptyState.hidden = hasCard;
+      previousButton.disabled = !hasCard || currentIndex === 0;
+      nextButton.disabled = !hasCard || currentIndex === visibleCards.length - 1;
+      sessionCount.textContent = hasCard
+        ? `Question ${currentIndex + 1} of ${visibleCards.length}`
+        : '0 questions';
+      updateProgress();
+      statusElement.textContent = '';
+      if (!hasCard) return;
+
+      document.getElementById('card-topic').textContent = currentCard.topicTitle;
+      document.getElementById('card-type').textContent = currentCard.subject;
+      questionElement.textContent = currentCard.question;
+      answerElement.textContent = currentCard.answer;
+      answerElement.hidden = true;
+      answerInput.value = '';
+      answerInput.hidden = mode !== 'self-test';
+      answerInputLabel.hidden = mode !== 'self-test';
+      revealButton.hidden = false;
+      againButton.hidden = true;
+      knownButton.hidden = true;
+      bookmarkButton.setAttribute('aria-pressed', String(Boolean(state.bookmarks[currentCard.id])));
+      bookmarkButton.textContent = state.bookmarks[currentCard.id] ? '★ Saved' : '☆ Save';
+      sourceElement.textContent = `Source notes: ${currentCard.topicTitle} | ${currentCard.section}`;
+      sourceLink.href = `topic.html?topic=${encodeURIComponent(currentCard.topicId)}#${encodeURIComponent(currentCard.sectionId)}`;
+      sourceLink.setAttribute('aria-label', `Open ${currentCard.topicTitle} notes`);
+    }
+
+    function revealAnswer() {
+      answerElement.hidden = false;
+      revealButton.hidden = true;
+      againButton.hidden = false;
+      knownButton.hidden = false;
+      statusElement.textContent = 'Compare your answer, then mark your recall.';
+    }
+
+    function markCard(mastered) {
+      const currentCard = visibleCards[currentIndex];
+      if (!currentCard) return;
+      if (mastered) state.mastered[currentCard.id] = true;
+      else delete state.mastered[currentCard.id];
+      saveState();
+      const message = mastered ? 'Marked as known.' : 'Added to review again.';
+      if (currentIndex < visibleCards.length - 1) currentIndex += 1;
+      updateView();
+      statusElement.textContent = message;
+    }
+
+    function shuffleCards() {
+      if (shuffled) {
+        cards = baseCards.slice();
+        shuffled = false;
+        shuffleButton.textContent = 'Shuffle';
+      } else {
+        cards = baseCards.slice();
+        for (let index = cards.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [cards[index], cards[swapIndex]] = [cards[swapIndex], cards[index]];
+        }
+        shuffled = true;
+        shuffleButton.textContent = 'Restore order';
+      }
+      currentIndex = 0;
+      updateView();
+    }
+
+    modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
+    topicFilter.addEventListener('change', () => { currentIndex = 0; updateView(); });
+    savedFilter.addEventListener('click', () => {
+      savedOnly = !savedOnly;
+      savedFilter.setAttribute('aria-pressed', String(savedOnly));
+      currentIndex = 0;
+      updateView();
+    });
+    shuffleButton.addEventListener('click', shuffleCards);
+    revealButton.addEventListener('click', revealAnswer);
+    againButton.addEventListener('click', () => markCard(false));
+    knownButton.addEventListener('click', () => markCard(true));
+    previousButton.addEventListener('click', () => { currentIndex -= 1; updateView(); });
+    nextButton.addEventListener('click', () => { currentIndex += 1; updateView(); });
+    bookmarkButton.addEventListener('click', () => {
+      const currentCard = visibleCards[currentIndex];
+      if (!currentCard) return;
+      if (state.bookmarks[currentCard.id]) delete state.bookmarks[currentCard.id];
+      else state.bookmarks[currentCard.id] = true;
+      saveState();
+      updateView();
+    });
+
+    async function loadRevisionData() {
+      try {
+        const manifestResponse = await fetch('topics/index.json');
+        if (!manifestResponse.ok) throw new Error('Topic list unavailable.');
+        const manifest = await manifestResponse.json();
+        if (!Array.isArray(manifest.topics)) throw new Error('Topic list is invalid.');
+        topics = await Promise.all(manifest.topics.map(async (topicId) => {
+          if (!/^[a-z0-9-]+$/.test(topicId)) throw new Error('Invalid topic ID.');
+          const response = await fetch(`topics/${topicId}.json`);
+          if (!response.ok) throw new Error('Topic data unavailable.');
+          return response.json();
+        }));
+        topics.forEach((topic) => {
+          const option = document.createElement('option');
+          option.value = topic.id;
+          option.textContent = topic.title;
+          topicFilter.append(option);
+          collectCards(topic);
+        });
+        baseCards = cards.slice();
+        updateView();
+      } catch (error) {
+        studyCard.hidden = true;
+        emptyState.hidden = false;
+        emptyState.querySelector('p').textContent = 'Revision data could not load. Open the site through a web server and try again.';
+        sessionCount.textContent = 'Revision data unavailable';
+      }
+    }
+
+    loadRevisionData();
+  </script>
+</body>
+</html>

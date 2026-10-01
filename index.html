@@ -13,6 +13,8 @@
     .hero{background:linear-gradient(135deg,#5b1026,#800020);color:white;padding:40px 20px;text-align:center}
     .hero h2{margin:0;font-size:28px}
     .hero p{max-width:700px;margin:12px auto;opacity:0.95}
+    .hero-study-link{margin:10px 0 0}
+    .hero-study-link a{color:white;font-weight:bold;text-underline-offset:4px}
     .container{max-width:1100px;margin:20px auto;padding:0 15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
     .card{background:white;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:0.2s}
     .card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(0,0,0,0.1)}
@@ -20,6 +22,16 @@
     .card h3{margin:12px 0 6px;color:#800020}
     .card p{font-size:14px;color:#555}
     .card a{display:inline-block;margin-top:10px;background:#800020;color:white;padding:9px 18px;border-radius:25px;text-decoration:none;font-weight:bold;font-size:14px}
+    .search-area{max-width:1100px;margin:24px auto 0;padding:0 15px}
+    .search-area form{display:flex;align-items:end;gap:10px;max-width:620px}
+    .search-field{flex:1;min-width:0}
+    .search-field label{display:block;margin-bottom:5px;color:#4b2632;font-size:14px;font-weight:bold}
+    .search-field input{box-sizing:border-box;width:100%;min-height:44px;padding:10px 12px;border:1px solid #c9aab4;border-radius:6px;background:white;color:#222;font:inherit}
+    .search-field input:focus{outline:3px solid #e9cbd5;outline-offset:1px;border-color:#800020}
+    .search-area button{min-height:44px;padding:9px 16px;border:0;border-radius:6px;background:#800020;color:white;font:inherit;font-weight:bold;cursor:pointer}
+    .search-area button:hover{background:#5b1026}
+    .search-status{margin:8px 0 0;color:#555;font-size:13px}
+    .search-empty{grid-column:1/-1;margin:0;padding:18px;background:white;border-left:4px solid #800020;color:#4b2632}
     .about{background:white;max-width:1100px;margin:25px auto;padding:25px;border-radius:14px}
     .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:30px;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:99}
     footer{text-align:center;padding:20px;color:#777;font-size:13px}
@@ -35,54 +47,47 @@
   <h2>Pass Your CATs & OSCE - Deep Notes</h2>
   <p>No shallow summaries. Doses, OSCE questions, past papers, Kenya guidelines. Made for Clinical Medicine students who want to actually understand.</p>
   <p style="margin-top:18px;"><a href="https://wa.me/254792117442?text=Hi%20ClinStudy%2C%20I%20need%20notes%20on%20" style="background:#25D366;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;">💬 WhatsApp Us: 0792 117 442</a></p>
+  <p class="hero-study-link"><a href="revision.html">Open Revision Studio →</a></p>
 </div>
 
-<div class="container">
-  <div class="card">
-    <span class="tag">MICROBIOLOGY • DEEP</span>
-    <h3>🦠 Malaria</h3>
-    <p>Complete with WHO severe criteria, life cycle, AL doses by weight, IV Artesunate, OSCE viva. Kenya Guidelines 2023.</p>
-    <div class="coverage">
-      <h4>Inside this guide</h4>
-      <ul>
-        <li>Species, transmission and the parasite life cycle</li>
-        <li>Symptoms, severe-malaria warning signs and investigations</li>
-        <li>Treatment approaches, prevention and OSCE questions</li>
-      </ul>
+<div class="search-area">
+  <form id="topic-search" role="search">
+    <div class="search-field">
+      <label for="topic-query">Find a study topic</label>
+      <input id="topic-query" name="q" type="search" placeholder="Try malaria, anemia, OSCE..." autocomplete="off">
     </div>
-    <a href="malaria.html">Read Deep Notes →</a>
-  </div>
-
-  <div class="card">
-    <span class="tag">PHYSIOLOGY • DEEP</span>
-    <h3>🩸 Anemia</h3>
-    <p>Micro/normo/macrocytic table, labs interpretation, Iron/B12/Folate doses, when to transfuse, pica & koilonychia.</p>
-    <div class="coverage">
-      <h4>Inside this guide</h4>
-      <ul>
-        <li>Classifying anemia by red-cell size and likely cause</li>
-        <li>Reading blood results and recognizing common signs</li>
-        <li>Iron, vitamin replacement and transfusion considerations</li>
-      </ul>
-    </div>
-    <a href="anemia.html">Read Deep Notes →</a>
-  </div>
-
-  <div class="card">
-    <span class="tag">ANATOMY • DEEP</span>
-    <h3>💪 Upper Limb</h3>
-    <p>Brachial plexus, nerve injuries (wrist drop, claw hand, ape hand), carpals mnemonic, Erb's vs Klumpke's, OSCE exam.</p>
-    <div class="coverage">
-      <h4>Inside this guide</h4>
-      <ul>
-        <li>Brachial plexus organization and major peripheral nerves</li>
-        <li>Clinical patterns of common nerve injuries</li>
-        <li>Carpal bones, key landmarks and OSCE examination points</li>
-      </ul>
-    </div>
-    <a href="upper-limb.html">Read Deep Notes →</a>
-  </div>
+    <button type="submit" aria-label="Search topics">⌕ Search</button>
+  </form>
+  <p id="search-status" class="search-status" aria-live="polite">Showing all 3 topics</p>
 </div>
+
+<div class="container" id="topic-list">
+  <p id="search-empty" class="search-empty" hidden>No topics match that search. Try a different keyword.</p>
+</div>
+
+<section class="revision-section" aria-labelledby="revision-heading">
+  <h2 id="revision-heading">Rapid Revision</h2>
+  <div class="revision-grid">
+  </div>
+</section>
+
+<section class="course-map" aria-labelledby="course-map-heading">
+  <div class="course-map-heading">
+    <div>
+      <p class="course-map-kicker">DIPLOMA-LEVEL STUDY GUIDE</p>
+      <h2 id="course-map-heading">Clinical Medicine Course Map</h2>
+    </div>
+    <div class="course-map-legend" aria-label="Topic status key">
+        <span class="map-status study-available">Study note</span>
+        <span class="map-status available">Full notes</span>
+      <span class="map-status outline">Outline only</span>
+    </div>
+  </div>
+  <p id="course-map-note" class="course-map-note"></p>
+  <div id="course-map-groups" class="course-map-groups" aria-live="polite">
+    <p class="course-map-loading">Loading course map...</p>
+  </div>
+</section>
 
 <div class="about">
   <h3 style="color:#800020;margin-top:0;">Why ClinStudy.ke?</h3>
@@ -95,5 +100,228 @@
 
 <footer>© 2026 vostemaverick + rita
 </footer>
+<script>
+  const searchForm = document.getElementById('topic-search');
+  const searchInput = document.getElementById('topic-query');
+  const topicList = document.getElementById('topic-list');
+  const revisionGrid = document.querySelector('.revision-grid');
+  const courseMapGroups = document.getElementById('course-map-groups');
+  const courseMapNote = document.getElementById('course-map-note');
+  const searchStatus = document.getElementById('search-status');
+  const searchEmpty = document.getElementById('search-empty');
+
+  function appendCoverage(card, coverage) {
+    const section = document.createElement('div');
+    section.className = 'coverage';
+    const heading = document.createElement('h4');
+    heading.textContent = 'Inside this guide';
+    const list = document.createElement('ul');
+    coverage.forEach((item) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      list.append(listItem);
+    });
+    section.append(heading, list);
+    card.append(section);
+  }
+
+  function renderTopicCard(topic) {
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.dataset.search = JSON.stringify(topic).toLocaleLowerCase();
+
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = `${topic.subject} | ${topic.level}`.toLocaleUpperCase();
+    const title = document.createElement('h3');
+    title.textContent = `${topic.icon} ${topic.title}`;
+    const summary = document.createElement('p');
+    summary.textContent = topic.summary;
+    appendCoverage(card, topic.coverage);
+
+    const link = document.createElement('a');
+    link.href = `topic.html?topic=${encodeURIComponent(topic.id)}`;
+    link.textContent = 'Read Deep Notes →';
+    card.prepend(tag, title, summary);
+    card.append(link);
+    topicList.append(card);
+  }
+
+  function renderRevisionCard(topic) {
+    const quiz = topic.sections.flatMap((section) => section.blocks)
+      .find((block) => block.type === 'quiz');
+    if (!quiz) return;
+
+    const card = document.createElement('details');
+    card.className = 'recall-card';
+    const summary = document.createElement('summary');
+    const label = document.createElement('span');
+    label.className = 'recall-topic';
+    label.textContent = topic.title;
+    summary.append(label, document.createTextNode(quiz.question));
+
+    const answer = document.createElement('div');
+    answer.className = 'recall-answer';
+    const answerText = document.createElement('p');
+    const strong = document.createElement('b');
+    strong.textContent = 'Answer: ';
+    answerText.append(strong, document.createTextNode(quiz.answer));
+    const link = document.createElement('a');
+    link.href = `topic.html?topic=${encodeURIComponent(topic.id)}`;
+    link.textContent = 'Review full notes →';
+    answer.append(answerText, link);
+    card.append(summary, answer);
+    revisionGrid.append(card);
+  }
+
+  function renderCourseMap(courseMap, courseNotes) {
+    const availableTopics = new Map([
+      ['malaria', 'malaria'],
+      ['anemia', 'anemia'],
+      ['upper limb', 'upper-limb'],
+      ['upper limb anatomy', 'upper-limb']
+    ]);
+    const studyNotes = new Map();
+    courseNotes.subjects.forEach((subject) => {
+      subject.notes.forEach((note) => {
+        studyNotes.set(`${subject.title.toLocaleLowerCase()}|${note.title.toLocaleLowerCase()}`, note.text);
+      });
+    });
+    courseMapNote.textContent = courseMap.scopeNote;
+    courseMapGroups.replaceChildren();
+
+    courseMap.groups.forEach((groupData) => {
+      const group = document.createElement('details');
+      group.className = 'course-map-group';
+      const summary = document.createElement('summary');
+      summary.textContent = groupData.title;
+      const topics = document.createElement('div');
+      topics.className = 'course-map-topics';
+
+      groupData.topics.forEach((topicData) => {
+        const topicGroup = document.createElement('section');
+        topicGroup.className = 'course-map-subject';
+        topicGroup.dataset.search = `${topicData.title} ${topicData.items.join(' ')}`.toLocaleLowerCase();
+        const heading = document.createElement('h3');
+        heading.textContent = topicData.title;
+        const topicList = document.createElement('ul');
+
+        topicData.items.forEach((item) => {
+          const itemElement = document.createElement('li');
+          const itemRow = document.createElement('div');
+          itemRow.className = 'course-map-item-row';
+          const itemText = document.createElement('span');
+          itemText.textContent = item;
+          const itemKey = item.toLocaleLowerCase();
+          const noteId = availableTopics.get(itemKey);
+          const noteText = studyNotes.get(`${topicData.title.toLocaleLowerCase()}|${itemKey}`);
+          if (noteId) {
+            const status = document.createElement('a');
+            status.className = 'map-status available';
+            status.href = `topic.html?topic=${encodeURIComponent(noteId)}`;
+            status.textContent = 'Full notes';
+            status.setAttribute('aria-label', `Open notes for ${item}`);
+            itemRow.append(itemText, status);
+          } else {
+            const status = document.createElement('span');
+            status.className = `map-status ${noteText ? 'study-available' : 'outline'}`;
+            status.textContent = noteText ? 'Study note' : 'Outline only';
+            itemRow.append(itemText, status);
+          }
+          itemElement.append(itemRow);
+          if (noteText) {
+            const noteDetails = document.createElement('details');
+            noteDetails.className = 'course-map-note-details';
+            const noteSummary = document.createElement('summary');
+            noteSummary.textContent = 'Read study note';
+            const noteParagraph = document.createElement('p');
+            noteParagraph.textContent = noteText;
+            noteDetails.append(noteSummary, noteParagraph);
+            itemElement.append(noteDetails);
+            topicGroup.dataset.search += ` ${noteText}`.toLocaleLowerCase();
+          }
+          topicList.append(itemElement);
+        });
+
+        topicGroup.append(heading, topicList);
+        topics.append(topicGroup);
+      });
+
+      group.append(summary, topics);
+      courseMapGroups.append(group);
+    });
+  }
+
+  searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim().toLocaleLowerCase();
+    let visibleCount = 0;
+    const topicCards = topicList.querySelectorAll('.card');
+
+    topicCards.forEach((card) => {
+      const matches = card.dataset.search.includes(query);
+      card.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    let matchingMapTopics = 0;
+    document.querySelectorAll('.course-map-subject').forEach((subject) => {
+      const matches = subject.dataset.search.includes(query);
+      subject.hidden = !matches;
+      if (matches) matchingMapTopics += 1;
+    });
+    document.querySelectorAll('.course-map-group').forEach((group) => {
+      const hasVisibleTopic = Array.from(group.querySelectorAll('.course-map-subject'))
+        .some((subject) => !subject.hidden);
+      group.hidden = !hasVisibleTopic;
+      if (query && hasVisibleTopic) group.open = true;
+      if (!query) group.open = false;
+    });
+
+    searchEmpty.hidden = visibleCount > 0 || matchingMapTopics > 0;
+    searchStatus.textContent = query
+      ? `${visibleCount + matchingMapTopics} ${visibleCount + matchingMapTopics === 1 ? 'match' : 'matches'} in notes and course map`
+      : `Showing all ${visibleCount} topics`;
+  });
+
+  async function loadTopicCatalog() {
+    try {
+      const manifestResponse = await fetch('topics/index.json');
+      if (!manifestResponse.ok) throw new Error('Topic manifest could not be loaded.');
+      const manifest = await manifestResponse.json();
+      if (!Array.isArray(manifest.topics)) throw new Error('Topic manifest is invalid.');
+      const topicIds = manifest.topics.filter((topicId) => /^[a-z0-9-]+$/.test(topicId));
+      const topics = await Promise.all(topicIds.map(async (topicId) => {
+        const response = await fetch(`topics/${topicId}.json`);
+        if (!response.ok) throw new Error('Topic data could not be loaded.');
+        return response.json();
+      }));
+      topics.forEach((topic) => {
+        renderTopicCard(topic);
+        renderRevisionCard(topic);
+      });
+      searchStatus.textContent = `Showing all ${topics.length} topics`;
+      const courseMapResponse = await fetch('topics/course-map.json');
+      if (!courseMapResponse.ok) throw new Error('Course map could not be loaded.');
+      const courseNotesResponse = await fetch('topics/course-notes.json');
+      if (!courseNotesResponse.ok) throw new Error('Course notes could not be loaded.');
+      renderCourseMap(await courseMapResponse.json(), await courseNotesResponse.json());
+    } catch (error) {
+      if (!topicList.querySelector('.card')) {
+        searchStatus.textContent = 'Topics could not be loaded. Open the site through a web server and try again.';
+        searchEmpty.hidden = false;
+        searchEmpty.textContent = 'Study topic data is unavailable.';
+      } else {
+        courseMapGroups.replaceChildren();
+        courseMapGroups.append(Object.assign(document.createElement('p'), {
+          className: 'course-map-loading',
+          textContent: 'The course map could not be loaded.'
+        }));
+      }
+    }
+  }
+
+  loadTopicCatalog();
+</script>
 </body>
 </html>

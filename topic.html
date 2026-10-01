@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clinical Medicine study notes and revision material from ClinStudy.ke.">
+  <title>Study Notes | ClinStudy.ke</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="notes-page">
+  <header class="notes-header">
+    <a href="index.html">← ClinStudy.ke</a>
+    <span>Clinical Medicine | Chuka University</span>
+    <a class="notes-revision-link" href="revision.html">Revision Studio</a>
+  </header>
+  <main class="notes-content">
+    <p id="topic-status" class="topic-status" role="status">Loading study notes...</p>
+    <article id="topic-content" hidden>
+      <div class="topic-heading">
+        <p id="topic-meta" class="topic-meta"></p>
+        <h1 id="topic-title"></h1>
+        <p id="topic-description" class="topic-description"></p>
+      </div>
+      <div id="topic-images" class="topic-images"></div>
+      <div id="topic-sections"></div>
+      <p class="study-notice">For study and revision only. Clinical decisions should follow current local guidelines and qualified supervision.</p>
+    </article>
+  </main>
+  <a class="notes-whatsapp" href="https://wa.me/254792117442" aria-label="Contact ClinStudy on WhatsApp">WhatsApp</a>
+  <script>
+    const topicId = new URLSearchParams(window.location.search).get('topic');
+    const statusElement = document.getElementById('topic-status');
+    const contentElement = document.getElementById('topic-content');
+    const sectionContainer = document.getElementById('topic-sections');
+
+    function createTextElement(tagName, text, className) {
+      const element = document.createElement(tagName);
+      element.textContent = text;
+      if (className) element.className = className;
+      return element;
+    }
+
+    function renderList(items, className) {
+      const list = document.createElement('ul');
+      if (className) list.className = className;
+      items.forEach((item) => list.append(createTextElement('li', item)));
+      return list;
+    }
+
+    function renderTable(block) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-wrap';
+      wrapper.tabIndex = 0;
+      wrapper.setAttribute('role', 'region');
+      wrapper.setAttribute('aria-label', `Scrollable table: ${block.headers.join(', ')}`);
+      wrapper.addEventListener('keydown', (event) => {
+        const scrollDistance = wrapper.clientWidth * 0.8;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+          event.preventDefault();
+          wrapper.scrollBy({
+            left: event.key === 'ArrowRight' ? scrollDistance : -scrollDistance,
+            behavior: 'smooth'
+          });
+        } else if (event.key === 'Home' || event.key === 'End') {
+          event.preventDefault();
+          wrapper.scrollTo({
+            left: event.key === 'End' ? wrapper.scrollWidth : 0,
+            behavior: 'smooth'
+          });
+        }
+      });
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+      block.headers.forEach((header) => headerRow.append(createTextElement('th', header)));
+      thead.append(headerRow);
+      const tbody = document.createElement('tbody');
+      block.rows.forEach((row) => {
+        const tableRow = document.createElement('tr');
+        row.forEach((cell) => tableRow.append(createTextElement('td', cell)));
+        tbody.append(tableRow);
+      });
+      table.append(thead, tbody);
+      wrapper.append(table);
+      return wrapper;
+    }
+
+    function renderCallout(block) {
+      const callout = document.createElement('aside');
+      callout.className = `note-callout ${['highlight', 'danger', 'dose', 'mnemonic'].includes(block.tone) ? block.tone : 'highlight'}`;
+      if (block.title) callout.append(createTextElement('h3', block.title));
+      if (block.text) callout.append(createTextElement('p', block.text));
+      if (block.items) callout.append(renderList(block.items));
+      return callout;
+    }
+
+    function renderQuestions(block) {
+      const group = document.createElement('div');
+      group.className = 'revision-questions';
+      block.items.forEach((item) => {
+        const entry = document.createElement('div');
+        entry.className = 'revision-question';
+        const question = document.createElement('p');
+        question.append(createTextElement('strong', 'Q: '), document.createTextNode(item.question));
+        const answer = document.createElement('p');
+        answer.append(createTextElement('strong', 'A: '), document.createTextNode(item.answer));
+        entry.append(question, answer);
+        group.append(entry);
+      });
+      return group;
+    }
+
+    function renderQuiz(block) {
+      const details = document.createElement('details');
+      details.className = 'notes-quiz';
+      details.append(createTextElement('summary', block.question));
+      details.append(createTextElement('p', block.answer));
+      return details;
+    }
+
+    function renderBlock(block) {
+      switch (block.type) {
+        case 'paragraph':
+          return createTextElement('p', block.text);
+        case 'list':
+          return renderList(block.items);
+        case 'table':
+          return renderTable(block);
+        case 'callout':
+          return renderCallout(block);
+        case 'qa':
+          return renderQuestions(block);
+        case 'quiz':
+          return renderQuiz(block);
+        default:
+          return null;
+      }
+    }
+
+    function renderTopicImage(imageData) {
+      const figure = document.createElement('figure');
+      figure.className = 'topic-figure';
+      const image = document.createElement('img');
+      image.src = imageData.src;
+      image.alt = imageData.alt;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.addEventListener('error', () => { figure.hidden = true; }, { once: true });
+
+      const caption = createTextElement('figcaption', imageData.caption);
+      const credit = document.createElement('span');
+      credit.className = 'image-credit';
+      credit.append(document.createTextNode(`${imageData.credit} `));
+      const sourceLink = createTextElement('a', 'Source');
+      sourceLink.href = imageData.sourceUrl;
+      sourceLink.target = '_blank';
+      sourceLink.rel = 'noopener noreferrer';
+      const licenseLink = createTextElement('a', imageData.license);
+      licenseLink.href = imageData.licenseUrl;
+      licenseLink.target = '_blank';
+      licenseLink.rel = 'noopener noreferrer';
+      credit.append(sourceLink, document.createTextNode(' | '), licenseLink);
+      caption.append(document.createElement('br'), credit);
+      figure.append(image, caption);
+      return figure;
+    }
+
+    function renderTopic(topic) {
+      document.title = `${topic.title} | ClinStudy.ke`;
+      document.getElementById('topic-meta').textContent = `${topic.subject} | ${topic.level}`;
+      document.getElementById('topic-title').textContent = topic.pageTitle;
+      document.getElementById('topic-description').textContent = topic.description;
+      const imageContainer = document.getElementById('topic-images');
+      (topic.images || []).forEach((imageData) => imageContainer.append(renderTopicImage(imageData)));
+
+      topic.sections.forEach((sectionData) => {
+        const section = document.createElement('section');
+        section.className = 'notes-section';
+        section.id = `${topic.id}-${sectionData.heading.toLocaleLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+        section.append(createTextElement('h2', sectionData.heading));
+        sectionData.blocks.forEach((block) => {
+          const renderedBlock = renderBlock(block);
+          if (renderedBlock) section.append(renderedBlock);
+        });
+        sectionContainer.append(section);
+      });
+
+      statusElement.hidden = true;
+      contentElement.hidden = false;
+    }
+
+    async function loadTopic() {
+      if (!topicId || !/^[a-z0-9-]+$/.test(topicId)) {
+        statusElement.textContent = 'Choose a study topic from the homepage to view its notes.';
+        return;
+      }
+
+      try {
+        const response = await fetch(`topics/${topicId}.json`);
+        if (!response.ok) throw new Error('Topic data could not be loaded.');
+        const topic = await response.json();
+        renderTopic(topic);
+      } catch (error) {
+        statusElement.textContent = 'Study notes could not be loaded. Open the site through a web server and try again.';
+      }
+    }
+
+    loadTopic();
+  </script>
+</body>
+</html>

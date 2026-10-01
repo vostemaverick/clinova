@@ -1,0 +1,94 @@
+{
+  "id": "malaria",
+  "title": "Malaria",
+  "pageTitle": "Malaria - Complete Clinical Notes",
+  "subject": "Microbiology",
+  "level": "Year 1 | High Yield",
+  "description": "Clinical malaria notes covering epidemiology, diagnosis, severity, treatment, prevention, and OSCE revision.",
+  "icon": "🦠",
+  "summary": "Life cycle, clinical features, severe-malaria assessment, investigations, management, and prevention.",
+  "coverage": ["Parasite species, transmission, and life cycle", "Symptoms, severe features, and investigations", "Treatment approaches, prevention, and OSCE revision"],
+  "images": [
+    {
+      "src": "images/malaria-life-cycle.jpg",
+      "alt": "Diagram of the Plasmodium life cycle through mosquito, liver, and human blood stages.",
+      "caption": "Plasmodium life cycle: mosquito, liver, and human blood stages.",
+      "credit": "CDC / Alexander J. da Silva, PhD / Melanie Moser, via Wikimedia Commons.",
+      "license": "Public domain (PD-USGov-HHS-CDC).",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plasmodium_lifecycle_PHIL_3405_lores.jpg",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "1. Definition and Epidemiology in Kenya",
+      "blocks": [
+        { "type": "paragraph", "text": "Malaria is a protozoal disease caused by Plasmodium species and transmitted through the bite of an infected female Anopheles mosquito. It is endemic in Nyanza, Western, and Coast regions. P. falciparum causes most cases in Kenya and is responsible for severe disease." }
+      ]
+    },
+    {
+      "heading": "2. Etiology",
+      "blocks": [
+        { "type": "table", "headers": ["Species", "Key feature", "Relapse?"], "rows": [["P. falciparum", "Most severe; high parasitemia and cerebral malaria", "No"], ["P. vivax and P. ovale", "May form dormant liver hypnozoites", "Yes"], ["P. malariae", "Chronic infection; associated with nephrotic syndrome", "No"]] }
+      ]
+    },
+    {
+      "heading": "3. Life Cycle",
+      "blocks": [
+        { "type": "paragraph", "text": "Mosquito → sporozoites → liver schizonts → merozoites → red blood cells → trophozoite → schizont → red-cell rupture. In P. vivax and P. ovale, liver hypnozoites can reactivate months later and cause relapse." },
+        { "type": "callout", "tone": "highlight", "title": "Why can fever be intermittent?", "text": "Red-cell rupture releases parasite products that trigger cytokines and raise the hypothalamic temperature set point. Falciparum rupture is often irregular; vivax and ovale classically recur every 48 hours, and malariae every 72 hours." }
+      ]
+    },
+    {
+      "heading": "4. Pathophysiology",
+      "blocks": [
+        { "type": "list", "items": ["Infected red cells adhere to endothelium and may obstruct small vessels in the brain, placenta, or kidneys.", "Hemolysis can cause anemia, jaundice, and dark urine (blackwater fever).", "Inflammatory cytokines contribute to fever, rigors, and hypoglycemia."] }
+      ]
+    },
+    {
+      "heading": "5. Clinical Features and Severe Malaria",
+      "blocks": [
+        { "type": "paragraph", "text": "Uncomplicated malaria commonly causes fever, chills, rigors (cold, hot, sweating phases), headache, joint pains, vomiting, and malaise without organ dysfunction." },
+        { "type": "callout", "tone": "danger", "title": "Severe malaria is an emergency. Any one danger feature needs urgent assessment.", "items": ["Cerebral features: altered consciousness, seizures, or coma (GCS below 11).", "Severe anemia: Hb below 5 g/dL.", "Acute kidney injury: creatinine above 265 umol/L or oliguria.", "Jaundice with parasitemia or hypoglycemia below 2.2 mmol/L.", "Acidosis, pulmonary edema, shock, bleeding/DIC, or hemoglobinuria.", "Hyperparasitemia above 10%."] }
+      ]
+    },
+    {
+      "heading": "6. Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Thick and thin blood films: thick film improves detection; thin film helps identify species.", "Rapid diagnostic test (RDT): HRP2 detects falciparum and may remain positive for about two weeks after treatment.", "Check Hb, platelets, bilirubin, creatinine, glucose, and liver function as clinically indicated.", "Test for malaria in a febrile patient in an endemic area, including during pregnancy."] }
+      ]
+    },
+    {
+      "heading": "7. Differential Diagnosis",
+      "blocks": [
+        { "type": "paragraph", "text": "Consider typhoid, dengue, brucellosis, sepsis, meningitis, and urinary tract infection. Test for malaria rather than treating fever blindly." }
+      ]
+    },
+    {
+      "heading": "8. Management",
+      "blocks": [
+        { "type": "callout", "tone": "dose", "title": "Uncomplicated malaria: Artemether-lumefantrine (AL)", "items": ["For adults over 35 kg: 4 tablets twice daily for 3 days; take with food or milk containing fat.", "Weight bands in the source notes: 5-14 kg = 1 tablet; 15-24 kg = 2 tablets; 25-34 kg = 3 tablets per dose.", "Dihydroartemisinin-piperaquine (DHA-PPQ) is listed as a second-line option if AL fails.", "Pregnancy: the source notes list quinine plus clindamycin in the first trimester and AL in the second and third trimesters.", "For P. vivax or P. ovale, the source notes list primaquine 0.25 mg/kg daily for 14 days after checking G6PD status."] },
+        { "type": "callout", "tone": "danger", "title": "Severe malaria: emergency treatment", "items": ["Refer urgently and start IV artesunate: 2.4 mg/kg at 0, 12, and 24 hours, then daily; the source notes list 3 mg/kg for children below 20 kg.", "When the patient can swallow, complete treatment with a full AL course.", "If artesunate is unavailable, the source notes list IM artemether or IV quinine as alternatives.", "Supportive care: monitor glucose, manage fever, assess transfusion need, and give fluids carefully because of pulmonary-edema risk.", "The source notes caution against IM injection and NSAIDs in severe malaria."] }
+      ]
+    },
+    {
+      "heading": "9. Complications",
+      "blocks": [
+        { "type": "list", "items": ["Cerebral malaria", "Severe anemia", "Acute kidney injury", "Pulmonary edema", "Hypoglycemia", "Death if untreated"] }
+      ]
+    },
+    {
+      "heading": "10. Prevention",
+      "blocks": [
+        { "type": "list", "items": ["Use insecticide-treated nets (LLINs).", "Indoor residual spraying (IRS).", "Intermittent preventive treatment in pregnancy (IPTp) as recommended by local guidance.", "Traveler chemoprophylaxis where indicated.", "Reduce mosquito breeding sites, including draining stagnant water."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "Why is AL taken with a fatty meal?", "answer": "Fat improves lumefantrine absorption." }, { "question": "Why check G6PD before primaquine?", "answer": "Primaquine can cause severe hemolysis in people with G6PD deficiency." }, { "question": "A patient with malaria has Hb 4 g/dL. What is the concern?", "answer": "This meets the severe-anemia criterion in the source notes; assess urgently for transfusion and the cause of anemia." }, { "question": "A 2-year-old has convulsions and a positive malaria RDT. What are the priorities?", "answer": "Treat as severe malaria: give IV artesunate, manage seizures, and check glucose urgently." }] },
+        { "type": "quiz", "question": "A child weighs 18 kg and has uncomplicated malaria. How many AL tablets are given per dose?", "answer": "2 tablets per dose, twice daily for 3 days (12 tablets total), according to the weight bands in these notes." }
+      ]
+    }
+  ]
+}

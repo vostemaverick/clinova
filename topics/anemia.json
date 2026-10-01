@@ -1,0 +1,69 @@
+{
+  "id": "anemia",
+  "title": "Anemia",
+  "pageTitle": "Anemia - Complete Notes",
+  "subject": "Physiology and Pathology",
+  "level": "Year 1 | Exam Heavy",
+  "description": "Anemia classification, clinical features, investigations, management, transfusion considerations, and OSCE revision.",
+  "icon": "🩸",
+  "summary": "Red-cell classification, laboratory interpretation, clinical signs, management, and transfusion considerations.",
+  "coverage": ["Classification by MCV and common causes", "Clinical features and stepwise investigations", "Management options and transfusion considerations"],
+  "images": [
+    {
+      "src": "images/human-blood-smear.jpg",
+      "alt": "Microscopic peripheral blood smear showing many red blood cells with central pallor.",
+      "caption": "Normal red-cell appearance in a peripheral blood smear; this image does not demonstrate anemia-specific cell changes.",
+      "credit": "Olena Hohulia, Куцик Влада, Кремінь Валентина, and Ivanchik Marya, via Wikimedia Commons.",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Human_blood.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "1. Definition",
+      "blocks": [
+        { "type": "paragraph", "text": "Anemia is hemoglobin below the expected range for age and sex. Thresholds in the source notes: men below 13 g/dL, women below 12 g/dL, pregnancy below 11 g/dL, and children below 11 g/dL. Reduced hemoglobin can impair oxygen delivery to tissues." }
+      ]
+    },
+    {
+      "heading": "2. Classification by MCV",
+      "blocks": [
+        { "type": "table", "headers": ["MCV", "Type", "Common causes in the source notes", "Key laboratory clue"], "rows": [["Below 80 fL", "Microcytic", "Iron deficiency, thalassemia, sideroblastic anemia, chronic disease", "Low ferritin and serum iron may support iron deficiency"], ["80-100 fL", "Normocytic", "Acute bleeding, chronic kidney disease, aplastic anemia, hemolysis", "Reticulocytes may be high in bleeding or hemolysis"], ["Above 100 fL", "Macrocytic", "Vitamin B12 or folate deficiency, alcohol, hypothyroidism, drugs such as methotrexate", "High MCV; hypersegmented neutrophils may occur"]] }
+      ]
+    },
+    {
+      "heading": "3. Pathophysiology",
+      "blocks": [
+        { "type": "list", "items": ["Iron deficiency reduces heme production and can lead to small, pale red cells. Causes listed include hookworm, poor diet, menorrhagia, and pregnancy.", "Vitamin B12 or folate deficiency impairs DNA synthesis and red-cell maturation, producing large cells (megaloblastic anemia).", "Hemolysis destroys red cells early; the marrow may compensate by increasing reticulocyte production."] }
+      ]
+    },
+    {
+      "heading": "4. Clinical Features",
+      "blocks": [
+        { "type": "paragraph", "text": "General features may include fatigue, pallor (including conjunctival or palmar pallor), dizziness, palpitations, shortness of breath on exertion, headache, and tinnitus." },
+        { "type": "list", "items": ["Iron deficiency: koilonychia, angular cheilitis, and pica.", "Vitamin B12 deficiency: glossitis, peripheral neuropathy, and subacute combined degeneration of the spinal cord.", "Hemolysis: jaundice, splenomegaly, and dark urine.", "Severe anemia: heart failure, tachycardia, and a systolic murmur."] }
+      ]
+    },
+    {
+      "heading": "5. Investigations: Stepwise Approach",
+      "blocks": [
+        { "type": "list", "items": ["Start with CBC, MCV, and reticulocyte count; classify by MCV.", "For microcytosis, consider ferritin, iron studies, stool occult blood, and stool testing for ova such as hookworm.", "For macrocytosis, consider vitamin B12, folate, TSH, and liver function tests.", "If hemolysis is suspected, consider LDH, indirect bilirubin, haptoglobin, and blood film.", "The source notes also list malaria testing, HIV testing, and stool microscopy in the local context."] }
+      ]
+    },
+    {
+      "heading": "6. Management",
+      "blocks": [
+        { "type": "callout", "tone": "dose", "title": "Management options listed in the source notes", "items": ["Iron deficiency: ferrous sulphate 200 mg three times daily (listed as 60 mg elemental iron); continue for 3 months after Hb normalizes. The source notes advise vitamin C and an empty stomach, and mention black stools and constipation as counseling points.", "Treat the cause. The source notes list albendazole 400 mg once for deworming when indicated and assessment/treatment of menorrhagia. Dietary sources include liver, beans, green vegetables, and fortified flour. IV iron sucrose is listed for severe cases or intolerance.", "Vitamin B12 deficiency: hydroxocobalamin 1 mg IM daily for 5 days then monthly; the source notes list oral B12 50 micrograms daily for diet-related deficiency.", "Folate deficiency: folic acid 5 mg daily for 4 months. The notes warn against giving folate alone when B12 deficiency is present because neurological injury may worsen.", "Sickle cell or hemolysis: the source notes list folic acid 5 mg daily lifelong, hydroxyurea, trigger avoidance, and transfusion when indicated."] },
+        { "type": "callout", "tone": "danger", "title": "Transfusion considerations from the source notes", "items": ["Hb below 4 g/dL regardless of symptoms.", "Hb below 5 g/dL with signs of heart failure.", "Hb below 6 g/dL in pregnancy.", "Symptoms with ongoing bleeding.", "The notes recommend packed cells rather than whole blood, slow transfusion, and consideration of furosemide to reduce overload risk. Follow current local protocols and senior clinical guidance."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "A woman has Hb 8 g/dL, MCV 68 fL, and low ferritin. What is the likely diagnosis?", "answer": "Iron-deficiency anemia. Pica can occur as a craving for non-food substances." }, { "question": "How can iron deficiency and thalassemia trait be distinguished in microcytosis?", "answer": "The source notes contrast low ferritin and high RDW in iron deficiency with normal ferritin, normal RDW, family history, and a Mentzer index below 13 in thalassemia trait." }, { "question": "A vegan patient has fatigue, tingling feet, and MCV 110 fL. What should be investigated?", "answer": "Vitamin B12 deficiency is important to consider; check B12 and treat deficiency according to clinical guidance." }] },
+        { "type": "quiz", "question": "A patient has MCV 110 fL and tingling feet. Which vitamin deficiency is especially important to investigate?", "answer": "Vitamin B12 deficiency; avoid giving folate alone before B12 deficiency has been considered." }
+      ]
+    }
+  ]
+}

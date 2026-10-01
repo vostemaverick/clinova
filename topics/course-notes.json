@@ -1,0 +1,253 @@
+{
+  "scopeNote": "Concise study notes to orient revision. They are not a substitute for institution-approved teaching, clinical supervision, or current Kenya Ministry of Health protocols. Treatment details are intentionally not prescribed here.",
+  "subjects": [
+    {
+      "title": "Human Anatomy",
+      "notes": [
+        { "title": "Anatomical terminology, planes, tissues, and body systems", "text": "Use standard directional terms (such as anterior/posterior, medial/lateral, and proximal/distal) relative to anatomical position. Planes describe sections of the body; tissues combine to form organs, and organs work together in systems." },
+        { "title": "Upper limb", "text": "Study bones and joints alongside muscle actions, nerve roots, peripheral nerve territories, and arterial supply. Link structure to examination findings such as weakness, sensory loss, deformity, and injury patterns." },
+        { "title": "Lower limb", "text": "Relate hip, knee, ankle, and foot anatomy to weight-bearing, gait, major muscle groups, dermatomes, peripheral nerves, and pulses. Practice a systematic neurovascular examination after injury." },
+        { "title": "Thorax", "text": "Organize the thorax into chest wall, pleural cavities, lungs, mediastinum, heart, and great vessels. Surface landmarks help localize examination findings and guide safe clinical assessment." },
+        { "title": "Abdomen and pelvis", "text": "Use abdominal regions and quadrants to describe pain and organize differential diagnoses. Learn peritoneal spaces, abdominal organs, pelvic structures, vessels, and clinically important referred pain patterns." },
+        { "title": "Head, neck, and neuroanatomy", "text": "Map cranial nerves to their functions and examination tests. Connect brain regions, spinal tracts, meninges, and vascular territories to motor, sensory, language, visual, and coordination findings." },
+        { "title": "Embryology and developmental anatomy", "text": "Study fertilization, germ layers, folding, organogenesis, and placental development as a timeline. Relate disrupted development to congenital anomalies while avoiding assumptions about cause from appearance alone." }
+      ]
+    },
+    {
+      "title": "Human Physiology",
+      "notes": [
+        { "title": "Cell physiology and homeostasis", "text": "Homeostasis maintains internal conditions through sensors, control centres, and effectors, commonly using negative feedback. Membrane transport, receptors, and cell signalling explain how tissues respond to changing conditions." },
+        { "title": "Blood and cardiovascular physiology", "text": "Blood transports gases, nutrients, hormones, and immune components. Cardiac output depends on heart rate and stroke volume; pressure, resistance, and vessel compliance shape tissue perfusion." },
+        { "title": "Respiratory physiology", "text": "Ventilation moves air, diffusion exchanges gases across the alveolar-capillary membrane, and perfusion delivers blood for exchange. Oxygen and carbon dioxide transport depend on ventilation-perfusion matching and hemoglobin." },
+        { "title": "Renal and fluid-electrolyte physiology", "text": "The nephron filters plasma, reabsorbs needed substances, and secretes selected solutes. Kidneys regulate volume, electrolytes, acid-base balance, and contribute to blood pressure and red-cell production." },
+        { "title": "Gastrointestinal and liver physiology", "text": "Digestion combines motility, secretion, enzymatic breakdown, and absorption. The liver processes nutrients and medicines, produces important proteins and bile, and participates in metabolism and detoxification." },
+        { "title": "Endocrine physiology", "text": "Endocrine glands release hormones that act through specific receptors and feedback loops. Learn hormone source, target, stimulus, and effect to interpret disorders of glucose, growth, thyroid, adrenal, and reproductive function." },
+        { "title": "Nervous system and special senses", "text": "Neurons communicate through electrical signals and synapses. Sensory pathways detect stimuli, motor pathways produce movement, and special senses convert light, sound, taste, smell, and position into neural information." },
+        { "title": "Reproductive physiology", "text": "The hypothalamic-pituitary-gonadal axis regulates gamete production and sex hormones. Understand the menstrual cycle, ovulation, fertilization, pregnancy-related physiological changes, and lactation as coordinated processes." }
+      ]
+    },
+    {
+      "title": "Medical Biochemistry",
+      "notes": [
+        { "title": "Biomolecules, enzymes, and metabolism", "text": "Proteins, carbohydrates, lipids, and nucleic acids have distinct structures and functions. Enzymes lower activation energy; their activity depends on conditions, substrate availability, and regulation." },
+        { "title": "Carbohydrate, lipid, and protein metabolism", "text": "Glycolysis, gluconeogenesis, glycogen metabolism, fatty-acid oxidation, and amino-acid pathways coordinate energy use and storage. Fed and fasting states shift the balance between synthesis and breakdown." },
+        { "title": "Vitamins and minerals", "text": "Micronutrients act as enzyme cofactors, structural components, antioxidants, or regulators. Deficiency and excess can affect multiple systems; interpret diet, absorption, clinical signs, and laboratory results together." },
+        { "title": "Clinical chemistry and laboratory interpretation", "text": "Interpret results using the patient's context, reference intervals, trends, and pre-analytical factors. Patterns across related tests are generally more informative than an isolated abnormal value." },
+        { "title": "Nutrition and energy balance", "text": "Energy balance reflects intake, absorption, storage, and expenditure. Assess dietary pattern, growth or weight trend, illness, social context, and specific nutrient risk rather than relying on a single measure." }
+      ]
+    },
+    {
+      "title": "Microbiology and Parasitology",
+      "notes": [
+        { "title": "Bacteriology and antimicrobial principles", "text": "Classify bacteria by structure, staining, growth, and virulence. Antimicrobial selection depends on likely organism, infection site, susceptibility, patient factors, and local stewardship guidance." },
+        { "title": "Virology and mycology", "text": "Viruses require host cells to replicate; fungi have distinct cell structures and may cause superficial or invasive disease. Diagnosis uses clinical context with appropriate antigen, molecular, microscopy, or culture tests." },
+        { "title": "Immunology and infection prevention", "text": "Innate immunity provides rapid barriers and responses; adaptive immunity uses specific B- and T-cell responses and memory. Infection prevention combines hand hygiene, standard precautions, vaccination, and transmission-based measures." },
+        { "title": "Medical parasitology and helminths", "text": "Parasites have life cycles involving hosts, tissues, and environmental stages. Exposure history, specimen choice, microscopy or antigen testing, and local epidemiology guide diagnosis." },
+        { "title": "Malaria", "text": "Malaria is transmitted by infected female Anopheles mosquitoes and involves liver and red-cell stages. Recognize danger signs, confirm infection with appropriate testing, and use current Kenya MOH guidance for management." }
+      ]
+    },
+    {
+      "title": "Pathology",
+      "notes": [
+        { "title": "Cell injury, inflammation, and repair", "text": "Cell injury may be reversible or progress to cell death depending on cause and duration. Inflammation recruits immune cells and mediators; healing may restore tissue or produce fibrosis." },
+        { "title": "Neoplasia", "text": "Neoplasia involves abnormal, relatively autonomous cell growth. Benign and malignant tumours differ in invasion and metastatic potential; diagnosis integrates clinical features, imaging, and tissue pathology." },
+        { "title": "Hematology and transfusion principles", "text": "Blood disorders affect red cells, white cells, platelets, or coagulation. Transfusion decisions require indication, component choice, compatibility, consent, monitoring, and current local protocols." },
+        { "title": "Systemic pathology", "text": "For each organ system, connect cause and mechanism to structural change, symptoms, examination, and tests. Compare common patterns and identify features that require urgent escalation." },
+        { "title": "Specimen handling and diagnostic pathology", "text": "Correct patient identification, specimen type, collection technique, container, timing, and transport preserve diagnostic quality. Label at collection and follow local infection-control and laboratory procedures." }
+      ]
+    },
+    {
+      "title": "Anemia and Hematology",
+      "notes": [
+        { "title": "Anemia", "text": "Anemia is reduced hemoglobin relative to an appropriate reference for age, sex, and pregnancy. Interpret symptoms, red-cell indices, reticulocytes, blood film, and likely cause; detailed notes are available separately." },
+        { "title": "Classification and causes of anemia", "text": "Mean corpuscular volume groups anemia into microcytic, normocytic, and macrocytic patterns. Reticulocyte response helps distinguish reduced production from blood loss or increased destruction." },
+        { "title": "Red-cell indices and blood-film interpretation", "text": "Read hemoglobin, MCV, MCH, RDW, and reticulocyte count together. A blood film can show cell size, shape, inclusions, and maturation changes that narrow the differential diagnosis." },
+        { "title": "Iron, folate, and vitamin B12 deficiency", "text": "Iron supports heme synthesis; folate and B12 support DNA synthesis and red-cell maturation. B12 deficiency can cause neurological features, so investigate it when macrocytosis or neuropathy is present." },
+        { "title": "Hemolysis and inherited blood disorders", "text": "Hemolysis shortens red-cell survival and may cause jaundice, reticulocytosis, and biochemical evidence of cell breakdown. Inherited disorders need confirmation, counselling, and longitudinal specialist-informed care." },
+        { "title": "Bleeding disorders and transfusion principles", "text": "Bleeding may result from vessel, platelet, coagulation-factor, or medication problems. Assess severity and stability; transfusion thresholds and products must follow current local policy and clinical supervision." }
+      ]
+    },
+    {
+      "title": "Clinical Methods and Physical Examination",
+      "notes": [
+        { "title": "History taking and presenting complaints", "text": "Clarify the patient's concern, onset, chronology, associated symptoms, relevant medical and medication history, family and social context, and ideas or concerns. Summarize the problem and check understanding." },
+        { "title": "General examination and vital signs", "text": "Assess appearance, consciousness, hydration, pallor, jaundice, cyanosis, edema, and distress. Measure and interpret vital signs using age-appropriate reference ranges and repeat unexpected results." },
+        { "title": "Cardiovascular examination", "text": "Combine inspection, pulse and blood-pressure assessment, precordial palpation, auscultation, and peripheral signs. Relate findings to hemodynamics and investigate symptoms such as chest pain, dyspnea, or syncope." },
+        { "title": "Respiratory examination", "text": "Assess respiratory effort and chest symmetry, then compare expansion, percussion, and breath sounds systematically. Interpret findings alongside oxygenation, vital signs, history, and imaging when indicated." },
+        { "title": "Abdominal examination", "text": "Inspect before palpation, percussion, and auscultation, adapting order to the clinical situation. Localize tenderness, assess organ enlargement and peritoneal signs, and escalate severe or unstable presentations." },
+        { "title": "Neurological examination", "text": "Use a structured assessment of mental state, cranial nerves, motor function, sensation, reflexes, coordination, and gait. Localize the lesion by matching findings to neuroanatomy." },
+        { "title": "Musculoskeletal examination", "text": "Compare sides and assess look, feel, movement, function, and relevant neurovascular status. Examine adjacent joints and document deformity, tenderness, range, and functional limitation." },
+        { "title": "Paediatric and obstetric examination", "text": "Adapt examination to age, development, pregnancy, privacy, consent, and comfort. Use appropriate charts and protocols, involve caregivers appropriately, and recognize maternal or child danger signs." }
+      ]
+    },
+    {
+      "title": "Clinical Procedures and Nursing Skills",
+      "notes": [
+        { "title": "Aseptic technique and patient safety", "text": "Prevent avoidable harm through hand hygiene, risk checks, patient identification, equipment preparation, and aseptic technique appropriate to the procedure. Explain the procedure and obtain consent." },
+        { "title": "Medication administration principles", "text": "Confirm the patient, medicine, indication, dose, route, timing, allergies, and documentation against an authorized prescription and local policy. Monitor response and report suspected adverse effects." },
+        { "title": "Wound care and basic dressings", "text": "Assess wound cause, dimensions, tissue, exudate, surrounding skin, pain, and infection risk. Use clean or sterile technique according to wound and local policy, then document and arrange review." },
+        { "title": "Venepuncture and specimen collection", "text": "Verify identity and requested tests, explain the procedure, select an appropriate site, and use safe sharps practice. Label specimens immediately at the bedside and follow transport requirements." },
+        { "title": "Basic life support and initial stabilization", "text": "Recognize unresponsiveness and abnormal breathing, call for help, and begin age-appropriate basic life support using current certified training. Follow local emergency algorithms and available equipment." },
+        { "title": "Documentation, observation, and handover", "text": "Record findings promptly, objectively, and legibly with date, time, and author. Communicate changes using a structured handover and confirm the receiving clinician understands urgent actions." }
+      ]
+    },
+    {
+      "title": "Communication, Ethics, and Professional Practice",
+      "notes": [
+        { "title": "Patient-centred communication and counselling", "text": "Use open questions, active listening, plain language, and teach-back. Explore the patient's priorities and agree on realistic next steps while respecting culture and individual preference." },
+        { "title": "Consent, confidentiality, and capacity", "text": "Consent requires understandable information, voluntariness, and decision-making capacity for the specific choice. Protect confidentiality while following lawful safeguarding and reporting duties." },
+        { "title": "Professional conduct and clinical records", "text": "Maintain boundaries, honesty, accountability, and respectful conduct. Records should be accurate, relevant, timely, and handled according to privacy and institutional rules." },
+        { "title": "Safeguarding, dignity, and culturally respectful care", "text": "Recognize possible abuse, neglect, coercion, or vulnerability and follow safeguarding procedures. Provide privacy, explain examinations, seek consent, and avoid discriminatory assumptions." },
+        { "title": "Teamwork, referral, and interprofessional practice", "text": "Share clear, relevant information with the care team and know the limits of your role. Refer promptly when needs exceed available competence, resources, or facility level." }
+      ]
+    },
+    {
+      "title": "Pharmacology",
+      "notes": [
+        { "title": "Pharmacokinetics and pharmacodynamics", "text": "Pharmacokinetics describes absorption, distribution, metabolism, and elimination; pharmacodynamics describes drug effects and dose-response. Age, pregnancy, organ function, and interactions alter response." },
+        { "title": "Prescription writing and medication safety", "text": "A prescription must be complete, legible, and consistent with the authorized formulary and local rules. Reconcile medicines, check allergies and interactions, and clarify uncertainty before administration." },
+        { "title": "Antimicrobials and antimicrobial stewardship", "text": "Use antimicrobials only when indicated, select according to likely pathogen and local susceptibility guidance, and review results and response. Preserve cultures where appropriate without delaying emergency care." },
+        { "title": "Analgesics, anaesthetic agents, and emergency medicines", "text": "Understand indications, mechanisms, contraindications, monitoring, and adverse effects for each medicine group. Emergency medicines require protocol-based preparation and supervision appropriate to role." },
+        { "title": "Cardiovascular, respiratory, endocrine, and gastrointestinal medicines", "text": "Organize medicines by therapeutic target and class. For each, learn indication, mechanism, important cautions, monitoring, interactions, and the local guideline that governs selection." },
+        { "title": "Adverse drug reactions and pharmacovigilance", "text": "Suspect an adverse drug reaction when timing and clinical pattern are plausible and consider alternatives. Stabilize serious reactions, document exposures, and report through the appropriate national and local system." }
+      ]
+    },
+    {
+      "title": "Medicine",
+      "notes": [
+        { "title": "Cardiology and cardiovascular medicine", "text": "Organize presentations into chest pain, dyspnea, palpitations, syncope, edema, and shock. Link history, pulse, blood pressure, ECG, and examination to a differential; urgent presentations need immediate escalation." },
+        { "title": "Respiratory medicine", "text": "Approach cough, breathlessness, wheeze, chest pain, and hemoptysis systematically. Combine exposure history, oxygenation, respiratory examination, and appropriate investigations; recognize respiratory distress early." },
+        { "title": "Gastroenterology and hepatology", "text": "Classify abdominal symptoms by location, timing, bowel change, bleeding, and systemic features. Interpret liver tests as patterns and consider hydration, nutrition, medication exposure, and urgent abdominal signs." },
+        { "title": "Renal and urinary medicine", "text": "Assess urine output, fluid status, blood pressure, urinalysis, renal function, and medication exposures. Distinguish acute change from chronic disease and identify electrolyte or volume-related instability." },
+        { "title": "Neurology", "text": "Localize neurological symptoms by onset, distribution, and examination findings. Sudden focal deficits, seizures, altered consciousness, or rapidly progressive weakness require urgent assessment." },
+        { "title": "Endocrinology and diabetes", "text": "Endocrine disorders arise from hormone excess, deficiency, resistance, or feedback disruption. Assess symptoms and relevant laboratory patterns; acute metabolic decompensation requires protocol-based urgent care." },
+        { "title": "Infectious and tropical diseases", "text": "Use exposure, geography, time course, examination, and diagnostic tests to frame infectious differentials. Apply infection prevention, notify where required, and use current national protocols for treatment." },
+        { "title": "Hematology", "text": "Interpret full blood count, indices, reticulocytes, smear, and coagulation results as patterns. Consider marrow production, destruction, loss, and malignancy, and escalate severe cytopenias or bleeding." },
+        { "title": "Rheumatology and musculoskeletal medicine", "text": "Differentiate inflammatory, degenerative, crystal, infectious, and traumatic patterns using time course, joint distribution, systemic features, and examination. A hot acutely painful joint needs urgent evaluation." },
+        { "title": "Dermatology", "text": "Describe lesions by primary morphology, distribution, color, border, and evolution. Include medication, exposure, and systemic history; mucosal involvement, blistering, or severe drug reactions need urgent review." }
+      ]
+    },
+    {
+      "title": "Surgery",
+      "notes": [
+        { "title": "Surgical principles, asepsis, and perioperative care", "text": "Safe surgery includes assessment, informed consent, identity and site checks, infection prevention, appropriate monitoring, and clear postoperative plans. Escalate deterioration promptly." },
+        { "title": "Acute abdomen and gastrointestinal surgery", "text": "Assess stability first, then pain, vomiting, bowel function, examination, and relevant tests. Peritonism, shock, obstruction, or suspected perforation warrants urgent surgical assessment." },
+        { "title": "Trauma, burns, and wound management", "text": "Prioritize life-threatening injury using a structured trauma approach and reassess after interventions. Document mechanism, neurovascular status, wound or burn extent, and arrange urgent referral when indicated." },
+        { "title": "Orthopaedics and fracture care", "text": "Describe fracture mechanism, alignment, skin condition, and distal neurovascular findings before and after intervention. Immobilization and referral depend on injury, patient, and local protocols." },
+        { "title": "Urology", "text": "Assess urinary symptoms, retention, hematuria, pain, infection features, and renal impact. Acute retention, obstructed infected systems, severe bleeding, or testicular emergencies need urgent care." },
+        { "title": "Neurosurgery principles", "text": "Recognize neurological decline, head injury red flags, spinal cord compromise, and raised intracranial pressure features. Stabilize and arrange urgent referral; avoid delaying transfer for nonessential investigations." },
+        { "title": "Breast and endocrine surgery", "text": "Assess a breast or neck mass by history, examination, and appropriate imaging or tissue pathways. Document red flags and use established referral pathways rather than assuming benignity." },
+        { "title": "Anaesthesia and pain management", "text": "Safe anaesthesia requires pre-assessment, airway and risk planning, monitoring, consent, and recovery observation. Pain management should be individualized, multimodal where appropriate, and protocol-guided." },
+        { "title": "Postoperative complications and referral", "text": "Monitor for bleeding, infection, thromboembolism, respiratory compromise, ileus, and wound problems. Use trends and early warning signs to escalate before deterioration." }
+      ]
+    },
+    {
+      "title": "Paediatrics and Child Health",
+      "notes": [
+        { "title": "Growth, development, and nutrition", "text": "Plot serial measurements on appropriate growth charts and interpret trends, not single values. Assess developmental domains, feeding, caregiver concerns, and possible regression or safeguarding risks." },
+        { "title": "Newborn assessment and neonatal emergencies", "text": "Assess transition, temperature, feeding, breathing, tone, and danger signs. Newborn respiratory distress, poor feeding, temperature instability, or reduced responsiveness requires urgent protocol-based care." },
+        { "title": "Common childhood infections", "text": "Assess general danger signs, hydration, respiratory effort, fever duration, immunization, and exposure. Use age-appropriate national guidance and recognize sepsis or severe infection early." },
+        { "title": "Respiratory, gastrointestinal, and neurological conditions", "text": "Children can deteriorate quickly; assess work of breathing, hydration, consciousness, and age-specific vital signs. Match tests and escalation to severity and current paediatric protocols." },
+        { "title": "Immunization and preventive child health", "text": "Use the current Kenya immunization schedule and document doses accurately. Combine preventive visits with growth monitoring, nutrition, developmental surveillance, and caregiver counselling." },
+        { "title": "Paediatric emergencies and safeguarding", "text": "Stabilize airway, breathing, circulation, glucose, and temperature using age-appropriate protocols. Consider safeguarding when injuries or history are inconsistent and follow reporting procedures." }
+      ]
+    },
+    {
+      "title": "Reproductive Health, Obstetrics, and Gynaecology",
+      "notes": [
+        { "title": "Antenatal care and normal pregnancy", "text": "Antenatal care monitors maternal wellbeing, fetal growth, risk factors, and prevention opportunities. Use current Kenya guidance for screening, supplementation, visit timing, and referral." },
+        { "title": "Labour, delivery, and immediate newborn care", "text": "Monitor maternal and fetal wellbeing and progress of labour using approved tools and local protocols. Maintain respectful care, infection prevention, preparedness, and timely escalation." },
+        { "title": "Obstetric emergencies and complications", "text": "Bleeding, hypertensive emergencies, sepsis, obstructed labour, and maternal collapse are time-critical. Call for help, stabilize, and follow current national emergency obstetric protocols." },
+        { "title": "Postnatal care", "text": "Assess maternal bleeding, infection, blood pressure, pain, mood, feeding, and newborn adaptation. Provide counselling and follow-up using current maternal and newborn guidance." },
+        { "title": "Gynaecological disorders", "text": "Assess bleeding, pelvic pain, discharge, masses, and reproductive goals with consent and privacy. Exclude pregnancy where relevant and identify acute bleeding, ectopic pregnancy, or sepsis risk." },
+        { "title": "Family planning and contraception", "text": "Offer balanced, non-coercive counselling on available methods, effectiveness, suitability, side effects, and return to fertility. Follow current national guidance and respect informed patient choice." },
+        { "title": "Sexual and reproductive health counselling", "text": "Provide confidential, nonjudgmental counselling about sexual health, infection prevention, testing, consent, and reproductive choices. Adapt communication to age, safety, and local law." }
+      ]
+    },
+    {
+      "title": "Mental Health",
+      "notes": [
+        { "title": "Mental health assessment and mental-status examination", "text": "Explore presenting concerns, function, history, substance use, supports, and safety. Mental-status examination covers appearance, behaviour, speech, mood, thought, perception, cognition, insight, and judgement." },
+        { "title": "Common psychiatric disorders", "text": "Assess symptom pattern, duration, distress, function, medical causes, and risk. Use recognized diagnostic frameworks and local referral pathways; avoid reducing a person to a diagnosis." },
+        { "title": "Substance use disorders", "text": "Ask sensitively about substance, amount, frequency, harms, withdrawal, and readiness for change. Assess overdose and withdrawal risk and link patients with appropriate medical and psychosocial support." },
+        { "title": "Crisis care, suicide risk, and safeguarding", "text": "Ask directly and compassionately about immediate safety, suicidal thoughts, plans, means, and protective supports. Do not leave an imminent-risk patient unsupported; follow emergency and safeguarding procedures." },
+        { "title": "Psychotropic medicines and referral", "text": "Know broad medication classes, intended effects, important adverse effects, and monitoring needs. Initiation and adjustment require appropriate competence, supervision, and current clinical guidance." }
+      ]
+    },
+    {
+      "title": "Emergency Medicine and Critical Care",
+      "notes": [
+        { "title": "Triage and initial assessment", "text": "Prioritize by acuity, not arrival order, using the approved triage system. Identify immediate threats, obtain vital signs, begin stabilization, reassess, and document escalation." },
+        { "title": "Airway, breathing, and circulation", "text": "A structured ABC approach identifies and treats immediate threats in sequence while calling for help. Reassess after every intervention and use local emergency algorithms." },
+        { "title": "Shock and resuscitation principles", "text": "Shock is inadequate tissue perfusion with multiple possible causes. Recognize altered mentation, poor perfusion, and abnormal vital signs; identify the cause and follow current resuscitation protocols." },
+        { "title": "Altered consciousness and seizures", "text": "Stabilize airway and breathing, check reversible causes such as glucose, and characterize onset and duration. Persistent seizure, new focal deficit, injury, pregnancy, or failure to recover needs urgent escalation." },
+        { "title": "Poisoning and envenomation", "text": "Ensure scene and staff safety, identify exposure and timing, assess ABCs, and contact toxicology or referral support. Avoid unverified remedies and follow current poison-management protocols." },
+        { "title": "Trauma and mass-casualty principles", "text": "Use structured trauma assessment, triage, and repeated reassessment. In mass-casualty incidents, follow incident command and local triage policy, prioritizing interventions with greatest immediate benefit." },
+        { "title": "Emergency referral and stabilization", "text": "Stabilize within available capability, communicate early with the receiving facility, and arrange safe transfer. Send observations, treatments, key results, and a concise handover with the patient." }
+      ]
+    },
+    {
+      "title": "Ophthalmology, ENT, and Oral Health",
+      "notes": [
+        { "title": "Common eye conditions and vision assessment", "text": "Check visual acuity for each eye and document method and correction. Assess pain, redness, discharge, pupils, and visual change; sudden vision loss requires urgent specialist assessment." },
+        { "title": "Red eye, ocular injury, and urgent referral", "text": "Pain, photophobia, reduced vision, chemical exposure, penetrating injury, or abnormal pupil are red flags. Protect the eye and follow emergency referral guidance; avoid pressure on suspected open-globe injury." },
+        { "title": "Ear, nose, and throat assessment", "text": "Take symptom and hearing history, inspect relevant structures with appropriate equipment, and document findings. Airway compromise, severe bleeding, or sudden sensorineural hearing loss needs urgent review." },
+        { "title": "Common ENT infections and emergencies", "text": "Assess fever, pain, swallowing, voice, hearing, and airway. Stridor, drooling, severe neck swelling, mastoid signs, or toxic appearance requires urgent escalation." },
+        { "title": "Oral examination and common dental conditions", "text": "Inspect teeth, gums, mucosa, tongue, and jaw opening, noting pain, swelling, trauma, and hydration. Facial swelling, spreading infection, trismus, or airway symptoms warrants urgent dental or medical referral." }
+      ]
+    },
+    {
+      "title": "Laboratory Medicine and Diagnostics",
+      "notes": [
+        { "title": "Full blood count and blood-film basics", "text": "Interpret hemoglobin, white cells, platelets, indices, and differential alongside symptoms and trends. Confirm unexpected results and use a blood film when morphology may clarify the pattern." },
+        { "title": "Renal, liver, and electrolyte tests", "text": "Interpret creatinine and electrolytes with hydration, medicines, and baseline; interpret liver enzymes, bilirubin, and synthetic function as a pattern. Severe abnormalities or symptoms need timely escalation." },
+        { "title": "Microbiology specimens and culture principles", "text": "Choose the right specimen and collect it aseptically before antimicrobials when feasible and safe. Correct labeling, transport, and clinical details improve interpretation of culture results." },
+        { "title": "Urinalysis and point-of-care testing", "text": "Point-of-care tests support but do not replace clinical assessment. Check sample quality, timing, device controls, and limitations; confirm results when required by local protocol." },
+        { "title": "ECG interpretation foundations", "text": "Read systematically: rate, rhythm, axis, intervals, and waveform changes, then compare with symptoms and prior ECGs. A normal tracing does not exclude serious disease; urgent findings require escalation." },
+        { "title": "Imaging selection and interpretation principles", "text": "Select imaging based on the clinical question, urgency, radiation or contrast considerations, and local availability. Correlate the report with examination and seek senior review for uncertainty." }
+      ]
+    },
+    {
+      "title": "Community and Public Health",
+      "notes": [
+        { "title": "Primary health care and health promotion", "text": "Primary health care integrates accessible first-contact care, prevention, community participation, and referral. Health promotion supports people and communities to improve control over health determinants." },
+        { "title": "Epidemiology and disease surveillance", "text": "Epidemiology describes health events by person, place, and time and tests determinants. Surveillance continuously collects and interprets data to detect trends and guide public-health action." },
+        { "title": "Communicable disease prevention and control", "text": "Control combines case detection, reporting, treatment or isolation when indicated, contact measures, vaccination, and community communication. Follow current national case definitions and notification rules." },
+        { "title": "Environmental health, water, sanitation, and hygiene", "text": "Safe water, sanitation, food safety, waste management, and hygiene reduce environmental exposure and infection. Assess household and community conditions and coordinate appropriate public-health action." },
+        { "title": "Maternal, newborn, and child community health", "text": "Community-based care connects families with antenatal, skilled birth, postnatal, immunization, nutrition, and early-childhood services. Recognize danger signs and support timely referral." },
+        { "title": "Occupational health and community diagnosis", "text": "Assess workplace hazards, exposure pathways, protective measures, and worker health. Community diagnosis combines local data and participation to identify priority needs and plan responses." },
+        { "title": "Health education and outreach", "text": "Set clear learning objectives, use accessible language and locally relevant examples, and invite questions. Evaluate understanding and participation rather than measuring success by information delivered alone." }
+      ]
+    },
+    {
+      "title": "Nutrition",
+      "notes": [
+        { "title": "Nutritional assessment", "text": "Assess dietary intake, anthropometry, clinical signs, illness, and social context. Use appropriate age-specific measures and growth references; interpret trends and avoid relying on appearance alone." },
+        { "title": "Macronutrient and micronutrient deficiencies", "text": "Deficiencies may affect growth, immunity, blood formation, bone, and neurological function. Consider diet, malabsorption, infection, and increased needs; confirm and manage according to current guidance." },
+        { "title": "Infant and young-child feeding", "text": "Support age-appropriate breastfeeding and complementary feeding using current national recommendations. Assess feeding technique, growth, illness, caregiver circumstances, and safe food preparation." },
+        { "title": "Therapeutic nutrition and nutrition in disease", "text": "Nutrition plans should reflect disease, swallowing, digestion, metabolic needs, and patient goals. Severe malnutrition and refeeding risk require trained, protocol-based assessment and monitoring." },
+        { "title": "Community nutrition and food security", "text": "Food security includes availability, access, utilization, and stability. Community nutrition responses combine assessment, education, social support, and referral to appropriate programmes." }
+      ]
+    },
+    {
+      "title": "Research Methods, Biostatistics, and Evidence-Based Practice",
+      "notes": [
+        { "title": "Research questions and study designs", "text": "Frame focused questions using population, exposure or intervention, comparison, and outcome. Choose a design suited to the question and consider bias, confounding, and feasibility." },
+        { "title": "Sampling, data collection, and ethics", "text": "Define the population, sampling approach, variables, and reliable data procedures. Research involving people requires prior ethical review, informed consent, privacy safeguards, and responsible data handling." },
+        { "title": "Descriptive statistics and basic inference", "text": "Use counts, proportions, and appropriate measures of centre and spread to describe data. Confidence intervals and tests quantify uncertainty but do not establish clinical importance or causation by themselves." },
+        { "title": "Reading clinical studies and guidelines", "text": "Assess question, methods, population, bias, results, applicability, and conflicts of interest. For guidelines, verify issuing body, date, scope, evidence basis, and local relevance." },
+        { "title": "Quality improvement and research project", "text": "Quality improvement uses measured data to test changes in a local process. Define a problem, baseline, aim, change, outcome measure, and ethical or governance requirements." }
+      ]
+    },
+    {
+      "title": "Health Systems, Leadership, and Health Informatics",
+      "notes": [
+        { "title": "Kenya health-system structure and referral pathways", "text": "Understand the current organization of national and county health services, facility levels, and referral links. Confirm the correct pathway using current Ministry of Health and county guidance." },
+        { "title": "Health service management and leadership", "text": "Effective leadership coordinates people, resources, communication, and accountability toward safe care. Use supervision, delegation within competence, team feedback, and transparent problem-solving." },
+        { "title": "Health records, data quality, and reporting", "text": "Accurate records support continuity, surveillance, planning, and accountability. Maintain completeness, consistency, timeliness, confidentiality, and compliance with approved reporting processes." },
+        { "title": "Quality assurance and patient safety", "text": "Patient safety identifies hazards, learns from incidents, and improves systems rather than assigning blame alone. Use audits, checklists, feedback, and measurable improvement cycles." },
+        { "title": "Health law, policy, and resource stewardship", "text": "Practice within current Kenyan law, professional scope, and institutional policy. Stewardship balances safe, equitable care with responsible use of medicines, equipment, time, and public resources." }
+      ]
+    }
+  ]
+}

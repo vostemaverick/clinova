@@ -1,0 +1,71 @@
+{
+  "id": "upper-limb",
+  "title": "Upper Limb Anatomy",
+  "pageTitle": "Upper Limb Anatomy - Complete Clinical Notes",
+  "subject": "Anatomy",
+  "level": "Year 1 | OSCE Favorite",
+  "description": "Upper-limb bones, joints, brachial plexus, peripheral nerves, arterial supply, clinical spaces, movements, and OSCE examination.",
+  "icon": "💪",
+  "summary": "Bones, joints, brachial plexus, nerve injuries, arterial supply, movements, and examination.",
+  "coverage": ["Bones, joints, and brachial plexus organization", "Peripheral nerve injuries and clinical patterns", "Arterial supply, movements, and OSCE examination"],
+  "images": [
+    {
+      "src": "images/brachial-plexus.png",
+      "alt": "Diagram of the brachial plexus, highlighting its lateral, posterior, and medial cords and branches.",
+      "caption": "Anterior view of the brachial plexus, with the cords and branches shown; use the table below for nerve roots and injury patterns.",
+      "credit": "Captain-n00dle and MissMJ, based on Mattopaedia / Gray's Anatomy (1918), via Wikimedia Commons.",
+      "license": "Public domain (PD-self).",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brachial_plexus_2.svg",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "1. Bones and Joints",
+      "blocks": [
+        { "type": "list", "items": ["Shoulder: clavicle, scapula (glenoid), and humerus. The shoulder is a ball-and-socket joint with a wide range of movement and is commonly dislocated.", "Elbow: humerus, ulna, and radius; primarily a hinge joint.", "Wrist: distal radius and carpal bones; the carpus contains eight bones."] },
+        { "type": "callout", "tone": "mnemonic", "title": "Carpal bones mnemonic", "text": "She Looks Too Pretty, Try To Catch Her: Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate. The scaphoid is commonly fractured; anatomical snuffbox tenderness is a clinical clue." }
+      ]
+    },
+    {
+      "heading": "2. Brachial Plexus and Major Nerves",
+      "blocks": [
+        { "type": "paragraph", "text": "Brachial plexus arrangement: roots C5-T1 → trunks → divisions → cords → terminal branches." },
+        { "type": "table", "headers": ["Nerve", "Roots", "Key muscles or function", "Clinical injury pattern"], "rows": [["Axillary", "C5-C6", "Deltoid", "Weak abduction from about 15-90 degrees; reduced sensation over the shoulder tip. May be injured in surgical-neck fracture or shoulder dislocation."], ["Musculocutaneous", "C5-C7", "Biceps and brachialis", "Weak elbow flexion."], ["Radial", "C5-T1", "Triceps and wrist/finger extensors", "Wrist drop; may be injured with a humeral shaft fracture."], ["Median", "C5-T1", "Thenar muscles, FPL, FDS", "Carpal tunnel may cause paresthesia and weak thumb opposition; more proximal lesions may cause the hand-of-benediction sign on attempted fist."], ["Ulnar", "C8-T1", "Hypothenar muscles and interossei", "Clawing of the hand and a positive Froment sign; may be injured near the medial epicondyle."]] }
+      ]
+    },
+    {
+      "heading": "3. Arterial Supply",
+      "blocks": [
+        { "type": "paragraph", "text": "Subclavian → axillary → brachial → radial and ulnar arteries → palmar arches. The brachial artery is assessed in the cubital fossa; the radial artery is commonly palpated at the wrist. Allen's test can be used before radial artery puncture." }
+      ]
+    },
+    {
+      "heading": "4. Important Spaces and Clinical Correlates",
+      "blocks": [
+        { "type": "list", "items": ["Anatomical snuffbox: scaphoid lies in the floor; tenderness after injury raises concern for scaphoid fracture and avascular necrosis.", "Cubital fossa: important contents include the biceps tendon, brachial artery, and median nerve, arranged roughly lateral to medial; the radial nerve lies laterally.", "Carpal tunnel: median nerve compression may cause night symptoms and tingling in the thumb, index, and middle fingers. Tinel and Phalen tests may support assessment."] }
+      ]
+    },
+    {
+      "heading": "5. Movements and Muscles",
+      "blocks": [
+        { "type": "table", "headers": ["Movement", "Main muscles or notes"], "rows": [["Shoulder abduction", "0-15 degrees: supraspinatus; 15-90 degrees: deltoid; above 90 degrees: scapular rotation by serratus anterior and trapezius."], ["Rotator cuff", "SITS: supraspinatus, infraspinatus, teres minor, subscapularis."], ["Elbow flexion", "Biceps brachii and brachialis."], ["Wrist extension", "Includes extensor carpi radialis longus."]] }
+      ]
+    },
+    {
+      "heading": "6. Erb Palsy and Klumpke Palsy",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Compare the common plexus injuries", "items": ["Erb palsy (C5-C6): classic waiter-tip posture; associated with shoulder dystocia or traction on the neck.", "Klumpke palsy (C8-T1): may cause claw hand; Horner syndrome can occur if sympathetic fibers are involved, classically after traction on an abducted arm."] }
+      ]
+    },
+    {
+      "heading": "OSCE Station: Upper-Limb Examination",
+      "blocks": [
+        { "type": "list", "items": ["Look for wasting, scars, deformity, or clawing.", "Feel temperature and pulses.", "Assess active and passive movement, including abduction and flexion/extension.", "Test sensation: axillary over the regimental badge area, median at the palmar thumb, ulnar at the little finger, and radial at the dorsal first web space.", "Use relevant special tests such as Tinel, Phalen, or Froment when indicated."] },
+        { "type": "qa", "items": [{ "question": "A patient cannot extend the wrist after a humeral shaft fracture. Which nerve is likely injured?", "answer": "The radial nerve. Assess the patient clinically and manage the injury according to local guidance; the source notes mention a cock-up splint and physiotherapy." }] },
+        { "type": "callout", "tone": "highlight", "title": "Quick nerve recall", "text": "Radial: wrist drop. Median: thenar weakness or ape-hand posture in selected lesions. Ulnar: clawing. Axillary: weak shoulder abduction." },
+        { "type": "quiz", "question": "Wrist drop after a humeral shaft fracture points to injury of which nerve?", "answer": "The radial nerve." }
+      ]
+    }
+  ]
+}

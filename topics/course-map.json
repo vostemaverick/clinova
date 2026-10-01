@@ -1,0 +1,48 @@
+{
+  "title": "Clinical Medicine and Surgery: Course Topic Map",
+  "scopeNote": "Broad study map for diploma-level Clinical Medicine and Surgery learners in Kenya. Unit names, sequencing, and depth vary by institution and current curriculum. Confirm against your institution's approved course outline.",
+  "groups": [
+    {
+      "title": "Foundational Biomedical Sciences",
+      "topics": [
+        { "title": "Human Anatomy", "items": ["Anatomical terminology, planes, tissues, and body systems", "Upper limb", "Lower limb", "Thorax", "Abdomen and pelvis", "Head, neck, and neuroanatomy", "Embryology and developmental anatomy"] },
+        { "title": "Human Physiology", "items": ["Cell physiology and homeostasis", "Blood and cardiovascular physiology", "Respiratory physiology", "Renal and fluid-electrolyte physiology", "Gastrointestinal and liver physiology", "Endocrine physiology", "Nervous system and special senses", "Reproductive physiology"] },
+        { "title": "Medical Biochemistry", "items": ["Biomolecules, enzymes, and metabolism", "Carbohydrate, lipid, and protein metabolism", "Vitamins and minerals", "Clinical chemistry and laboratory interpretation", "Nutrition and energy balance"] },
+        { "title": "Microbiology and Parasitology", "items": ["Bacteriology and antimicrobial principles", "Virology and mycology", "Immunology and infection prevention", "Medical parasitology and helminths", "Malaria"] },
+        { "title": "Pathology", "items": ["Cell injury, inflammation, and repair", "Neoplasia", "Hematology and transfusion principles", "Systemic pathology", "Specimen handling and diagnostic pathology"] },
+        { "title": "Anemia and Hematology", "items": ["Anemia", "Classification and causes of anemia", "Red-cell indices and blood-film interpretation", "Iron, folate, and vitamin B12 deficiency", "Hemolysis and inherited blood disorders", "Bleeding disorders and transfusion principles"] }
+      ]
+    },
+    {
+      "title": "Clinical Foundations and Skills",
+      "topics": [
+        { "title": "Clinical Methods and Physical Examination", "items": ["History taking and presenting complaints", "General examination and vital signs", "Cardiovascular examination", "Respiratory examination", "Abdominal examination", "Neurological examination", "Musculoskeletal examination", "Paediatric and obstetric examination"] },
+        { "title": "Clinical Procedures and Nursing Skills", "items": ["Aseptic technique and patient safety", "Medication administration principles", "Wound care and basic dressings", "Venepuncture and specimen collection", "Basic life support and initial stabilization", "Documentation, observation, and handover"] },
+        { "title": "Communication, Ethics, and Professional Practice", "items": ["Patient-centred communication and counselling", "Consent, confidentiality, and capacity", "Professional conduct and clinical records", "Safeguarding, dignity, and culturally respectful care", "Teamwork, referral, and interprofessional practice"] },
+        { "title": "Pharmacology", "items": ["Pharmacokinetics and pharmacodynamics", "Prescription writing and medication safety", "Antimicrobials and antimicrobial stewardship", "Analgesics, anaesthetic agents, and emergency medicines", "Cardiovascular, respiratory, endocrine, and gastrointestinal medicines", "Adverse drug reactions and pharmacovigilance"] }
+      ]
+    },
+    {
+      "title": "Medical and Surgical Disciplines",
+      "topics": [
+        { "title": "Medicine", "items": ["Cardiology and cardiovascular medicine", "Respiratory medicine", "Gastroenterology and hepatology", "Renal and urinary medicine", "Neurology", "Endocrinology and diabetes", "Infectious and tropical diseases", "Hematology", "Rheumatology and musculoskeletal medicine", "Dermatology"] },
+        { "title": "Surgery", "items": ["Surgical principles, asepsis, and perioperative care", "Acute abdomen and gastrointestinal surgery", "Trauma, burns, and wound management", "Orthopaedics and fracture care", "Urology", "Neurosurgery principles", "Breast and endocrine surgery", "Anaesthesia and pain management", "Postoperative complications and referral"] },
+        { "title": "Paediatrics and Child Health", "items": ["Growth, development, and nutrition", "Newborn assessment and neonatal emergencies", "Common childhood infections", "Respiratory, gastrointestinal, and neurological conditions", "Immunization and preventive child health", "Paediatric emergencies and safeguarding"] },
+        { "title": "Reproductive Health, Obstetrics, and Gynaecology", "items": ["Antenatal care and normal pregnancy", "Labour, delivery, and immediate newborn care", "Obstetric emergencies and complications", "Postnatal care", "Gynaecological disorders", "Family planning and contraception", "Sexual and reproductive health counselling"] },
+        { "title": "Mental Health", "items": ["Mental health assessment and mental-status examination", "Common psychiatric disorders", "Substance use disorders", "Crisis care, suicide risk, and safeguarding", "Psychotropic medicines and referral"] },
+        { "title": "Emergency Medicine and Critical Care", "items": ["Triage and initial assessment", "Airway, breathing, and circulation", "Shock and resuscitation principles", "Altered consciousness and seizures", "Poisoning and envenomation", "Trauma and mass-casualty principles", "Emergency referral and stabilization"] },
+        { "title": "Ophthalmology, ENT, and Oral Health", "items": ["Common eye conditions and vision assessment", "Red eye, ocular injury, and urgent referral", "Ear, nose, and throat assessment", "Common ENT infections and emergencies", "Oral examination and common dental conditions"] }
+      ]
+    },
+    {
+      "title": "Diagnostics and Population Health",
+      "topics": [
+        { "title": "Laboratory Medicine and Diagnostics", "items": ["Full blood count and blood-film basics", "Renal, liver, and electrolyte tests", "Microbiology specimens and culture principles", "Urinalysis and point-of-care testing", "ECG interpretation foundations", "Imaging selection and interpretation principles"] },
+        { "title": "Community and Public Health", "items": ["Primary health care and health promotion", "Epidemiology and disease surveillance", "Communicable disease prevention and control", "Environmental health, water, sanitation, and hygiene", "Maternal, newborn, and child community health", "Occupational health and community diagnosis", "Health education and outreach"] },
+        { "title": "Nutrition", "items": ["Nutritional assessment", "Macronutrient and micronutrient deficiencies", "Infant and young-child feeding", "Therapeutic nutrition and nutrition in disease", "Community nutrition and food security"] },
+        { "title": "Research Methods, Biostatistics, and Evidence-Based Practice", "items": ["Research questions and study designs", "Sampling, data collection, and ethics", "Descriptive statistics and basic inference", "Reading clinical studies and guidelines", "Quality improvement and research project"] },
+        { "title": "Health Systems, Leadership, and Health Informatics", "items": ["Kenya health-system structure and referral pathways", "Health service management and leadership", "Health records, data quality, and reporting", "Quality assurance and patient safety", "Health law, policy, and resource stewardship"] }
+      ]
+    }
+  ]
+}

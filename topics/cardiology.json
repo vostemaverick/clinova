@@ -1,0 +1,59 @@
+{
+  "id": "cardiology",
+  "title": "Cardiology and Cardiovascular Medicine",
+  "pageTitle": "Cardiology - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "A structured approach to cardiovascular symptoms, examination, investigations, common syndromes, and urgent presentations.",
+  "icon": "❤️",
+  "summary": "Approach chest pain, breathlessness, edema, palpitations, cardiovascular tests, and common cardiac emergencies.",
+  "coverage": ["Cardiovascular history and focused examination", "ECG, biomarkers, imaging, and risk assessment", "Ischemia, arrhythmia, valve disease, and emergencies"],
+  "sections": [
+    {
+      "heading": "1. Cardiovascular Assessment",
+      "blocks": [
+        { "type": "paragraph", "text": "Cardiovascular assessment combines symptoms, risk factors, examination, and targeted tests. Stabilize an acutely unwell patient first; do not delay emergency care while completing a routine history." },
+        { "type": "list", "items": ["Ask about chest discomfort, dyspnea, orthopnea, paroxysmal nocturnal dyspnea, edema, palpitations, syncope, exercise tolerance, and symptom progression.", "Review hypertension, diabetes, kidney disease, prior vascular disease, family history of premature cardiovascular disease, smoking, medicines, and relevant substance use.", "Examine pulse and rhythm, blood pressure, perfusion, jugular venous pressure, precordium, heart sounds and murmurs, lungs, peripheral edema, and peripheral pulses."] }
+      ]
+    },
+    {
+      "heading": "2. Investigations and Risk Assessment",
+      "blocks": [
+        { "type": "list", "items": ["Obtain a 12-lead ECG promptly for acute chest pain, suspected arrhythmia, syncope, or hemodynamic instability; compare with previous tracings where available.", "Troponin interpretation depends on assay, timing, change over time, symptoms, ECG, and alternative causes of myocardial injury; a single result must not be interpreted in isolation.", "Common tests include full blood count, electrolytes and renal function, glucose, lipids, chest radiography, and echocardiography when indicated.", "Use cardiovascular risk assessment to guide prevention in appropriate stable patients; acute symptoms require diagnostic assessment rather than reliance on a risk score."] }
+      ]
+    },
+    {
+      "heading": "3. Ischemic Heart Disease and Acute Chest Pain",
+      "blocks": [
+        { "type": "paragraph", "text": "Myocardial ischemia occurs when oxygen supply does not meet myocardial demand. Stable angina is typically exertional and relieved by rest, while acute coronary syndrome (ACS) may present with persistent or new rest pain, dyspnea, sweating, nausea, or atypical symptoms." },
+        { "type": "callout", "tone": "danger", "title": "Suspected ACS is time-critical", "items": ["Arrange urgent emergency assessment for ongoing chest pain, ischemic ECG change, hemodynamic instability, syncope, or suspected ACS.", "Use local emergency pathways for serial ECGs, cardiac biomarkers, antithrombotic treatment, reperfusion assessment, and transfer.", "Consider other life-threatening causes including aortic dissection, pulmonary embolism, tension pneumothorax, and esophageal rupture."] }
+      ]
+    },
+    {
+      "heading": "4. Rhythm and Conduction Disorders",
+      "blocks": [
+        { "type": "list", "items": ["Describe an ECG rhythm systematically: rate, regularity, P waves, PR interval, QRS width, and relationship between atrial and ventricular activity.", "Atrial fibrillation is an irregularly irregular rhythm without consistent organized P waves; assess stability, precipitating illness, stroke risk, bleeding risk, and rate/rhythm strategy under current guidance.", "Bradycardia or tachycardia with hypotension, chest pain, shock, syncope, acute heart failure, or altered consciousness needs urgent monitored care.", "Syncope requires assessment for cardiac causes, including arrhythmia and structural disease, alongside reflex, orthostatic, neurological, and metabolic causes."] }
+      ]
+    },
+    {
+      "heading": "5. Valvular and Vascular Disease",
+      "blocks": [
+        { "type": "paragraph", "text": "Characterize a murmur by timing, location, radiation, intensity, pitch, and response to maneuvers when appropriate. Relate the finding to symptoms and pulse or pressure changes; echocardiography is central to defining valve structure and severity." },
+        { "type": "list", "items": ["Aortic stenosis classically produces an ejection systolic murmur radiating toward the carotids; concerning symptoms include exertional syncope, angina, or breathlessness.", "Mitral regurgitation classically produces a pansystolic murmur at the apex that may radiate to the axilla.", "Acute pulmonary edema, suspected aortic dissection, limb ischemia, or a new murmur with instability requires urgent senior assessment."] }
+      ]
+    },
+    {
+      "heading": "6. Prevention and Long-Term Care",
+      "blocks": [
+        { "type": "list", "items": ["Address smoking, physical activity, diet, blood pressure, lipids, diabetes, and medication adherence through shared, individualized planning.", "Use evidence-based antiplatelet, lipid-lowering, antianginal, heart-failure, or anticoagulation treatment only when indicated and in line with current local protocols.", "Review symptoms, function, treatment effects, renal function or electrolytes when relevant, and access to follow-up and rehabilitation."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What is a safe initial test for a patient with suspected acute coronary syndrome?", "answer": "Obtain and interpret a 12-lead ECG promptly, while arranging urgent clinical assessment and the local ACS pathway." }, { "question": "What features make a tachyarrhythmia an emergency?", "answer": "Hemodynamic instability, shock, syncope, ongoing ischemic chest pain, acute heart failure, or altered consciousness require urgent monitored assessment." }, { "question": "Which test defines valve anatomy and helps assess murmur severity?", "answer": "Echocardiography." }] },
+        { "type": "quiz", "question": "A patient has ongoing chest pain, sweating, and new ST-segment changes. What should happen next?", "answer": "Treat as a time-critical suspected acute coronary syndrome: arrange emergency monitored assessment and activate the current local ACS pathway." }
+      ]
+    }
+  ]
+}

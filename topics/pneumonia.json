@@ -1,0 +1,64 @@
+{
+  "id": "pneumonia",
+  "title": "Pneumonia",
+  "pageTitle": "Pneumonia - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Pneumonia recognition, severity assessment, investigations, treatment principles, complications, and prevention.",
+  "icon": "🫁",
+  "summary": "Assess acute lower-respiratory infection, identify severity and complications, and use local treatment guidance.",
+  "coverage": ["Community- and hospital-acquired pneumonia", "Clinical findings, investigations, and CRB-65", "Treatment principles, complications, and prevention"],
+  "sections": [
+    {
+      "heading": "1. Definition and Classification",
+      "blocks": [
+        { "type": "paragraph", "text": "Pneumonia is infection of the lung parenchyma causing an acute inflammatory response. Classify by acquisition setting and patient risk because likely organisms, investigations, and antimicrobial choices differ." },
+        { "type": "list", "items": ["Community-acquired pneumonia develops outside hospital or is present at admission.", "Hospital-acquired pneumonia develops after admission and was not incubating at the time of admission; resistant pathogens and hospital policy influence management.", "Aspiration, viral, opportunistic, and tuberculosis-related disease may need separate diagnostic and management pathways."] }
+      ]
+    },
+    {
+      "heading": "2. Causes and Clinical Features",
+      "blocks": [
+        { "type": "list", "items": ["Causes include bacteria and respiratory viruses; pathogen likelihood varies with age, epidemiology, comorbidity, exposure, and acquisition setting.", "Typical features include cough, fever, sputum, dyspnea, pleuritic chest pain, tachypnea, and focal crackles or bronchial breathing.", "Older or immunocompromised people may present with confusion, functional decline, or fewer typical symptoms.", "Ask about onset, sputum, aspiration risk, sick contacts, travel, tuberculosis exposure, vaccination, medicines, comorbidity, and recent healthcare or antibiotic exposure."] }
+      ]
+    },
+    {
+      "heading": "3. Assessment and Severity",
+      "blocks": [
+        { "type": "list", "items": ["Assess airway, breathing, circulation, mental status, temperature, pulse, respiratory rate, blood pressure, and oxygen saturation.", "CRB-65 assigns one point each for new Confusion, Respiratory rate at least 30/min, low Blood pressure (systolic below 90 mmHg or diastolic 60 mmHg or below), and age 65 years or older.", "Use CRB-65 with clinical judgment, comorbidities, oxygenation, ability to take oral treatment, social support, and local pathways; a score alone does not decide disposition.", "Consider sepsis or respiratory failure when there is hypotension, hypoxia, altered consciousness, poor perfusion, or rapidly worsening illness."] }
+      ]
+    },
+    {
+      "heading": "4. Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Chest radiography supports diagnosis when available and helps identify complications or alternative causes; do not delay urgent stabilization for imaging.", "Common tests in more severe illness include full blood count, renal function/electrolytes, glucose, and inflammatory markers as appropriate.", "Blood cultures, sputum studies, viral testing, or other microbiology are guided by severity, setting, likely pathogen, and local protocol; obtain samples before antimicrobials when feasible without delaying urgent treatment.", "Assess oxygenation and consider blood gases in severe disease, hypoxia, suspected ventilatory failure, or deterioration.", "Consider tuberculosis testing when symptoms, exposure, imaging, or local epidemiology raise suspicion; follow infection-control precautions."] }
+      ]
+    },
+    {
+      "heading": "5. Management Principles",
+      "blocks": [
+        { "type": "paragraph", "text": "Choose site of care and treatment from severity, likely cause, comorbidity, pregnancy, allergies, recent antimicrobial exposure, local resistance patterns, and current national or institutional guidance." },
+        { "type": "list", "items": ["Start appropriate empiric antimicrobial treatment promptly when bacterial pneumonia is likely, especially in severe illness; select the regimen and duration from current local guidance and review when results return.", "Provide supportive care based on need, including fluids with attention to overload risk, antipyretics/analgesia where appropriate, nutrition, and oxygen for hypoxemia using a suitable target.", "Review response, vital signs, oxygenation, oral intake, adverse effects, and culture or imaging results. Reconsider the diagnosis or complications if the patient does not improve as expected.", "Use infection prevention measures and antimicrobial stewardship; narrow or stop antimicrobials when the clinical picture and results support doing so."] }
+      ]
+    },
+    {
+      "heading": "6. Complications and Escalation",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Urgent escalation is required for clinical deterioration", "items": ["Complications include sepsis, respiratory failure, parapneumonic effusion, empyema, lung abscess, and multiorgan dysfunction.", "Escalate urgently for increasing oxygen need, severe work of breathing, persistent hypoxia, hypotension, confusion, cyanosis, poor perfusion, or inability to protect the airway.", "Reassess for resistant or unexpected pathogens, tuberculosis, pulmonary embolism, heart failure, malignancy, or other diagnoses when the course is atypical or treatment response is poor."] }
+      ]
+    },
+    {
+      "heading": "7. Prevention and Discharge Planning",
+      "blocks": [
+        { "type": "list", "items": ["Promote recommended vaccination, smoking cessation, hand hygiene, adequate nutrition, and management of chronic illness.", "Before discharge, confirm clinical stability, safe oral intake and medicines, an appropriate follow-up plan, and clear return precautions.", "Explain expected recovery and advise reassessment for worsening breathlessness, persistent or recurrent fever, confusion, chest pain, or inability to take fluids or medicines."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What does each CRB-65 point represent?", "answer": "New confusion, respiratory rate at least 30/min, low blood pressure (systolic below 90 or diastolic 60 mmHg or below), and age 65 years or older." }, { "question": "Name two reasons to request microbiology in pneumonia.", "answer": "Examples include severe illness, hospital-acquired infection, risk of resistant organisms, treatment failure, or a need to target therapy." }, { "question": "When should tuberculosis be considered in a patient thought to have pneumonia?", "answer": "Consider it when symptoms, exposure, imaging, or local epidemiology suggest TB, and follow appropriate infection-control and testing pathways." }] },
+        { "type": "quiz", "question": "A patient with suspected pneumonia is confused, hypotensive, and hypoxic. What is the priority?", "answer": "Urgent assessment and stabilization for severe pneumonia/sepsis, including oxygenation and circulation, with escalation and protocol-directed treatment." }
+      ]
+    }
+  ]
+}

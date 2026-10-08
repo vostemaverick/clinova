@@ -1,0 +1,58 @@
+{
+  "id": "heart-failure",
+  "title": "Heart Failure",
+  "pageTitle": "Heart Failure - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Heart-failure syndromes, clinical assessment, investigations, chronic management principles, and acute decompensation.",
+  "icon": "❤️",
+  "summary": "Recognize congestion and poor perfusion, classify ventricular function, and plan safe assessment and follow-up.",
+  "coverage": ["Left- and right-sided features and functional classes", "ECG, natriuretic peptides, and echocardiography", "Chronic treatment principles and acute decompensation"],
+  "sections": [
+    {
+      "heading": "1. Definition and Classification",
+      "blocks": [
+        { "type": "paragraph", "text": "Heart failure is a clinical syndrome caused by a structural or functional cardiac abnormality, producing raised intracardiac pressures and/or inadequate cardiac output. Symptoms and signs must be interpreted with objective evidence of cardiac dysfunction." },
+        { "type": "list", "items": ["Heart failure with reduced ejection fraction (HFrEF): left-ventricular ejection fraction 40% or less. HF with mildly reduced EF is generally 41-49%; HF with preserved EF is generally 50% or more, with additional evidence needed to establish the syndrome.", "Left-sided congestion commonly causes pulmonary symptoms; right-sided congestion commonly causes peripheral edema, raised jugular venous pressure, and hepatic congestion.", "NYHA functional class describes limitation during activity; it is not a measure of ejection fraction."] }
+      ]
+    },
+    {
+      "heading": "2. Causes and Pathophysiology",
+      "blocks": [
+        { "type": "list", "items": ["Common causes include ischemic heart disease, hypertension, valvular disease, cardiomyopathy, arrhythmia, congenital disease, and toxic or inflammatory injury.", "Compensatory sympathetic and renin-angiotensin-aldosterone activation may initially support circulation but contributes to vasoconstriction, fluid retention, and adverse cardiac remodeling.", "Precipitants of decompensation include infection, ischemia, arrhythmia, uncontrolled blood pressure, anemia, renal dysfunction, excess salt/fluid, and missed or interacting medicines."] }
+      ]
+    },
+    {
+      "heading": "3. Clinical Features",
+      "blocks": [
+        { "type": "list", "items": ["Symptoms include exertional dyspnea, orthopnea, paroxysmal nocturnal dyspnea, fatigue, reduced exercise tolerance, and ankle swelling.", "Signs may include raised JVP, basal crackles, displaced apex, third heart sound, peripheral edema, hepatomegaly, cool extremities, or low oxygen saturation.", "Consider alternative or coexisting causes of breathlessness and edema, including lung disease, renal disease, anemia, venous disease, and medication effects."] }
+      ]
+    },
+    {
+      "heading": "4. Investigations",
+      "blocks": [
+        { "type": "list", "items": ["ECG helps identify ischemia, prior infarction, arrhythmia, conduction disease, or an alternative diagnosis; a normal ECG makes HFrEF less likely but does not alone exclude all heart failure.", "Natriuretic peptides can support or help exclude heart failure, interpreted with renal function, age, obesity, and other clinical factors.", "Echocardiography assesses ejection fraction, chamber size, valves, right-heart function, and other structural causes.", "Common baseline tests include full blood count, renal function/electrolytes, liver tests, thyroid function, glucose/HbA1c, and chest imaging when indicated.", "Investigate the underlying cause and reversible contributors rather than treating congestion alone."] }
+      ]
+    },
+    {
+      "heading": "5. Chronic Management Principles",
+      "blocks": [
+        { "type": "paragraph", "text": "Treatment depends on ejection-fraction phenotype, symptoms, blood pressure, renal function, potassium, comorbidity, access, and local guidance. Introduce and monitor therapies under qualified clinical supervision." },
+        { "type": "list", "items": ["For HFrEF, disease-modifying therapy commonly combines renin-angiotensin system inhibition (including ARNI where appropriate), an evidence-based beta-blocker, a mineralocorticoid-receptor antagonist, and an SGLT2 inhibitor when suitable and available.", "Loop diuretics are used to relieve fluid congestion; adjust to clinical response and monitor renal function and electrolytes.", "Treat the cause and comorbidities, support adherence, review medicines that may worsen heart failure, and provide individualized advice on activity, diet, vaccination, and self-monitoring.", "Titrate disease-modifying treatment gradually with monitoring. Avoid initiating or increasing selected therapies during unstable acute decompensation without appropriate assessment.", "Consider device therapy, specialist referral, or advanced-care planning for selected patients according to function, rhythm, prognosis, and local pathways."] }
+      ]
+    },
+    {
+      "heading": "6. Acute Decompensated Heart Failure",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Urgent assessment is needed for acute pulmonary edema or poor perfusion", "items": ["Assess airway, breathing, circulation, oxygenation, mental state, perfusion, precipitant, and hemodynamic stability.", "Severe breathlessness at rest, hypoxia, chest pain, hypotension, cyanosis, confusion, or rapidly worsening edema requires urgent emergency care.", "Management is guided by oxygenation, blood pressure, volume status, and cause; options may include monitored diuresis and ventilatory support. Oxygen is used for hypoxemia rather than routinely for every patient.", "Avoid reflex fluid loading in a congested patient. Monitor response, urine output, renal function, electrolytes, and signs of shock."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "Which investigation defines left-ventricular ejection fraction and assesses valve structure?", "answer": "Echocardiography." }, { "question": "Name common symptoms of left-sided congestion.", "answer": "Exertional dyspnea, orthopnea, and paroxysmal nocturnal dyspnea are common." }, { "question": "What should be checked when titrating renin-angiotensin system medicines or mineralocorticoid-receptor antagonists?", "answer": "Blood pressure, renal function, and electrolytes—especially potassium—should be monitored as indicated." }] },
+        { "type": "quiz", "question": "A patient with known heart failure develops severe breathlessness at rest, hypoxia, and crackles. What is the immediate priority?", "answer": "Urgent emergency assessment for acute decompensated heart failure/pulmonary edema, with monitored stabilization and evaluation of the precipitant." }
+      ]
+    }
+  ]
+}

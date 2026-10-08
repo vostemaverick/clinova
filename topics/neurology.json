@@ -1,0 +1,56 @@
+{
+  "id": "neurology",
+  "title": "Neurology",
+  "pageTitle": "Neurology - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Neurological history, examination and localization, common syndromes, investigations, and urgent neurological presentations.",
+  "icon": "🧠",
+  "summary": "Localize neurological problems, assess stroke and seizures, and recognize headache and spinal emergencies.",
+  "coverage": ["Neurological history and structured examination", "Stroke, seizures, headache, and focal deficits", "Localization, investigations, and emergency red flags"],
+  "sections": [
+    {
+      "heading": "1. Neurological History",
+      "blocks": [
+        { "type": "list", "items": ["Clarify onset, progression, duration, and distribution of weakness, sensory change, pain, tremor, imbalance, visual symptoms, speech change, swallowing difficulty, or altered awareness.", "For transient or episodic events ask about witnessed features, triggers, duration, recovery, injury, tongue biting, and incontinence without assuming the cause.", "Review headache pattern, fever, trauma, vascular risk, medicines, substance use, pregnancy, prior neurological disease, and function at baseline.", "Establish exact timing for a suspected stroke or seizure because it can change urgent treatment eligibility."] }
+      ]
+    },
+    {
+      "heading": "2. Neurological Examination and Localization",
+      "blocks": [
+        { "type": "list", "items": ["Assess mental status and speech, cranial nerves, motor bulk/tone/power, reflexes, sensation, coordination, gait, and relevant autonomic function.", "Compare sides and document specific findings. Distinguish upper motor neuron signs, lower motor neuron signs, neuromuscular junction patterns, and muscle disease.", "Localize the lesion to brain, spinal cord, nerve root, plexus, peripheral nerve, neuromuscular junction, or muscle before constructing a differential.", "Perform a focused examination immediately in an unstable patient and repeat it after deterioration or intervention."] }
+      ]
+    },
+    {
+      "heading": "3. Stroke and Transient Ischemic Attack",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Sudden focal neurological deficit is a stroke emergency", "items": ["Activate the local stroke pathway immediately; record last known well, baseline function, anticoagulants, glucose, and vital signs.", "Urgent brain imaging distinguishes hemorrhage from ischemia and guides reperfusion and antithrombotic decisions.", "Do not give food, drink, or oral medicines until swallowing safety is assessed.", "A transient resolved deficit still needs urgent assessment because early recurrent stroke risk can be significant."] }
+      ]
+    },
+    {
+      "heading": "4. Seizures and Altered Consciousness",
+      "blocks": [
+        { "type": "list", "items": ["During a convulsive seizure protect from injury, time the event, maintain a safe airway position when possible, and do not restrain or place objects in the mouth.", "Prolonged seizure, repeated seizures without recovery, first seizure, pregnancy, trauma, fever/meningism, or persistent altered consciousness needs urgent emergency care.", "Check reversible causes including glucose, hypoxia, infection, metabolic disturbance, medication/toxin exposure, and head injury.", "Differentiate seizure from syncope and other episodic conditions using history, witness account, examination, ECG, and targeted investigations."] }
+      ]
+    },
+    {
+      "heading": "5. Headache, Spinal, and Peripheral Nerve Red Flags",
+      "blocks": [
+        { "type": "list", "items": ["Thunderclap onset, new focal deficit, fever with neck stiffness, papilledema, altered consciousness, pregnancy/postpartum state, cancer, immunosuppression, or recent trauma are headache red flags.", "Back pain with saddle anesthesia, new bladder/bowel dysfunction, bilateral weakness, or progressive neurological deficit raises concern for cauda equina or spinal cord compression.", "Acute ascending weakness, bulbar symptoms, respiratory weakness, or rapidly progressive neuropathy requires urgent monitoring and escalation.", "Use targeted imaging, lumbar puncture, nerve studies, or laboratory tests only after assessing contraindications and the clinical question."] }
+      ]
+    },
+    {
+      "heading": "6. Investigations and Ongoing Care",
+      "blocks": [
+        { "type": "list", "items": ["Select CT/MRI, glucose, electrolytes, infection tests, ECG, EEG, or cerebrospinal fluid analysis according to the syndrome and urgency.", "Review medication effects and interactions, vascular risk, rehabilitation needs, mobility, swallowing, communication, mood, and caregiver support.", "Use multidisciplinary rehabilitation and prevention plans after stroke or neurological injury, including safe mobility and complication prevention.", "Explain uncertainty clearly and arrange safety-netting and follow-up; new or worsening deficits require reassessment."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What timing detail is essential in suspected acute stroke?", "answer": "The last time the patient was known to be at their neurological baseline (last known well)." }, { "question": "What should a bystander do during a convulsive seizure?", "answer": "Protect the person from injury, time the seizure, and avoid restraint or putting anything in the mouth; seek urgent help for prolonged or repeated seizures or other danger signs." }, { "question": "Name three headache red flags.", "answer": "Examples include thunderclap onset, focal deficit, fever/neck stiffness, papilledema, altered consciousness, pregnancy/postpartum state, cancer, or immunosuppression." }] },
+        { "type": "quiz", "question": "A patient suddenly develops facial weakness and arm weakness. What is the priority?", "answer": "Treat as a possible acute stroke: activate the urgent stroke pathway, establish last known well, check glucose, and arrange emergency assessment and brain imaging." }
+      ]
+    }
+  ]
+}

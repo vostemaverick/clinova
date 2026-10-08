@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body{font-family:Arial;margin:0;background:#f5f7fb;color:#222;line-height:1.7}
-    header{background:#800020;color:white;padding:18px 20px;position:sticky;top:0;z-index:10}
+    header{background:#800020;color:rgb(255, 255, 255);padding:18px 20px;position:sticky;top:0;z-index:10}
     header h1{margin:0;font-size:22px}
     header p{margin:4px 0 0;opacity:0.9;font-size:14px}
     .hero{background:linear-gradient(135deg,#5b1026,#800020);color:white;padding:40px 20px;text-align:center}
@@ -58,7 +58,7 @@
     </div>
     <button type="submit" aria-label="Search topics">⌕ Search</button>
   </form>
-  <p id="search-status" class="search-status" aria-live="polite">Showing all 3 topics</p>
+  <p id="search-status" class="search-status" aria-live="polite">Loading topics...</p>
 </div>
 
 <div class="container" id="topic-list">
@@ -128,7 +128,15 @@
   function renderTopicCard(topic) {
     const card = document.createElement('article');
     card.className = 'card';
-    card.dataset.search = JSON.stringify(topic).toLocaleLowerCase();
+    card.dataset.search = [
+      topic.title,
+      topic.subject,
+      topic.level,
+      topic.description,
+      topic.summary,
+      ...topic.coverage,
+      ...topic.sections.map((section) => section.heading)
+    ].join(' ').toLocaleLowerCase();
 
     const tag = document.createElement('span');
     tag.className = 'tag';
@@ -179,7 +187,17 @@
       ['malaria', 'malaria'],
       ['anemia', 'anemia'],
       ['upper limb', 'upper-limb'],
-      ['upper limb anatomy', 'upper-limb']
+      ['upper limb anatomy', 'upper-limb'],
+      ['cardiology and cardiovascular medicine', 'cardiology'],
+      ['respiratory medicine', 'respiratory'],
+      ['gastroenterology and hepatology', 'gastroenterology'],
+      ['renal and urinary medicine', 'renal'],
+      ['neurology', 'neurology'],
+      ['hypertension', 'hypertension'],
+      ['diabetes mellitus', 'diabetes'],
+      ['heart failure', 'heart-failure'],
+      ['asthma and copd', 'asthma-copd'],
+      ['pneumonia', 'pneumonia']
     ]);
     const studyNotes = new Map();
     courseNotes.subjects.forEach((subject) => {
@@ -201,7 +219,6 @@
       groupData.topics.forEach((topicData) => {
         const topicGroup = document.createElement('section');
         topicGroup.className = 'course-map-subject';
-        topicGroup.dataset.search = `${topicData.title} ${topicData.items.join(' ')}`.toLocaleLowerCase();
         const heading = document.createElement('h3');
         heading.textContent = topicData.title;
         const topicList = document.createElement('ul');
@@ -210,11 +227,16 @@
           const itemElement = document.createElement('li');
           const itemRow = document.createElement('div');
           itemRow.className = 'course-map-item-row';
-          const itemText = document.createElement('span');
+          const itemText = document.createElement('a');
+          itemText.className = 'course-map-topic-link';
           itemText.textContent = item;
           const itemKey = item.toLocaleLowerCase();
           const noteId = availableTopics.get(itemKey);
           const noteText = studyNotes.get(`${topicData.title.toLocaleLowerCase()}|${itemKey}`);
+          itemElement.dataset.search = `${groupData.title} ${topicData.title} ${item} ${noteText || ''}`.toLocaleLowerCase();
+          itemText.href = noteId
+            ? `topic.html?topic=${encodeURIComponent(noteId)}`
+            : `curriculum.html?subject=${encodeURIComponent(topicData.title)}&topic=${encodeURIComponent(item)}`;
           if (noteId) {
             const status = document.createElement('a');
             status.className = 'map-status available';
@@ -223,13 +245,19 @@
             status.setAttribute('aria-label', `Open notes for ${item}`);
             itemRow.append(itemText, status);
           } else {
-            const status = document.createElement('span');
+            const status = document.createElement('a');
             status.className = `map-status ${noteText ? 'study-available' : 'outline'}`;
-            status.textContent = noteText ? 'Study note' : 'Outline only';
+            status.href = itemText.href;
+            status.textContent = noteText ? 'Study note' : 'Open topic';
+            status.setAttribute('aria-label', `Open ${noteText ? 'study note' : 'topic outline'} for ${item}`);
             itemRow.append(itemText, status);
           }
           itemElement.append(itemRow);
           if (noteText) {
+            const noteLink = document.createElement('a');
+            noteLink.className = 'course-map-note-link';
+            noteLink.href = itemText.href;
+            noteLink.textContent = 'Open study note →';
             const noteDetails = document.createElement('details');
             noteDetails.className = 'course-map-note-details';
             const noteSummary = document.createElement('summary');
@@ -237,8 +265,7 @@
             const noteParagraph = document.createElement('p');
             noteParagraph.textContent = noteText;
             noteDetails.append(noteSummary, noteParagraph);
-            itemElement.append(noteDetails);
-            topicGroup.dataset.search += ` ${noteText}`.toLocaleLowerCase();
+            itemElement.append(noteLink, noteDetails);
           }
           topicList.append(itemElement);
         });
@@ -252,8 +279,7 @@
     });
   }
 
-  searchForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+  function applyTopicSearch() {
     const query = searchInput.value.trim().toLocaleLowerCase();
     let visibleCount = 0;
     const topicCards = topicList.querySelectorAll('.card');
@@ -266,9 +292,16 @@
 
     let matchingMapTopics = 0;
     document.querySelectorAll('.course-map-subject').forEach((subject) => {
-      const matches = subject.dataset.search.includes(query);
-      subject.hidden = !matches;
-      if (matches) matchingMapTopics += 1;
+      let subjectHasMatch = false;
+      subject.querySelectorAll('.course-map-subject li').forEach((item) => {
+        const matches = item.dataset.search.includes(query);
+        item.hidden = !matches;
+        if (matches) {
+          matchingMapTopics += 1;
+          subjectHasMatch = true;
+        }
+      });
+      subject.hidden = !subjectHasMatch;
     });
     document.querySelectorAll('.course-map-group').forEach((group) => {
       const hasVisibleTopic = Array.from(group.querySelectorAll('.course-map-subject'))
@@ -282,7 +315,13 @@
     searchStatus.textContent = query
       ? `${visibleCount + matchingMapTopics} ${visibleCount + matchingMapTopics === 1 ? 'match' : 'matches'} in notes and course map`
       : `Showing all ${visibleCount} topics`;
+  }
+
+  searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    applyTopicSearch();
   });
+  searchInput.addEventListener('input', applyTopicSearch);
 
   async function loadTopicCatalog() {
     try {
@@ -300,12 +339,12 @@
         renderTopicCard(topic);
         renderRevisionCard(topic);
       });
-      searchStatus.textContent = `Showing all ${topics.length} topics`;
       const courseMapResponse = await fetch('topics/course-map.json');
       if (!courseMapResponse.ok) throw new Error('Course map could not be loaded.');
       const courseNotesResponse = await fetch('topics/course-notes.json');
       if (!courseNotesResponse.ok) throw new Error('Course notes could not be loaded.');
       renderCourseMap(await courseMapResponse.json(), await courseNotesResponse.json());
+      applyTopicSearch();
     } catch (error) {
       if (!topicList.querySelector('.card')) {
         searchStatus.textContent = 'Topics could not be loaded. Open the site through a web server and try again.';

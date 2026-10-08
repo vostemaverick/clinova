@@ -1,0 +1,65 @@
+{
+  "id": "diabetes",
+  "title": "Diabetes Mellitus",
+  "pageTitle": "Diabetes Mellitus - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Diabetes classification, diagnosis, clinical assessment, complications, ongoing care, and hyperglycemic emergencies.",
+  "icon": "🩸",
+  "summary": "Recognize diabetes, interpret diagnostic tests, prevent complications, and identify emergencies.",
+  "coverage": ["Type 1, type 2, gestational, and other diabetes", "Diagnostic tests, assessment, and complications", "Long-term care, hypoglycemia, DKA, and HHS"],
+  "sections": [
+    {
+      "heading": "1. Definition and Classification",
+      "blocks": [
+        { "type": "paragraph", "text": "Diabetes mellitus is a group of metabolic disorders characterized by persistent hyperglycemia due to impaired insulin secretion, insulin action, or both." },
+        { "type": "list", "items": ["Type 1 diabetes involves autoimmune beta-cell destruction and usually requires lifelong insulin.", "Type 2 diabetes combines insulin resistance with progressive beta-cell dysfunction and is associated with genetic and environmental factors.", "Other forms include diabetes secondary to pancreatic disease, endocrine disorders, or medicines. Gestational diabetes is hyperglycemia first recognized during pregnancy and is assessed using pregnancy-specific criteria."] }
+      ]
+    },
+    {
+      "heading": "2. Clinical Features",
+      "blocks": [
+        { "type": "list", "items": ["Classic symptoms include polyuria, polydipsia, unexplained weight loss, fatigue, and blurred vision.", "Type 2 diabetes may be asymptomatic and detected through screening or during assessment for infection or complications.", "Ask about duration, family history, diet, physical activity, medicines, pregnancy, cardiovascular risk, and symptoms of acute metabolic decompensation."] }
+      ]
+    },
+    {
+      "heading": "3. Diagnosis and Initial Assessment",
+      "blocks": [
+        { "type": "paragraph", "text": "Common diagnostic criteria in non-pregnant adults include fasting plasma glucose at least 7.0 mmol/L, 2-hour glucose at least 11.1 mmol/L during a 75-g oral glucose tolerance test, HbA1c at least 6.5% (48 mmol/mol) using a standardized assay, or random plasma glucose at least 11.1 mmol/L with classic symptoms or hyperglycemic crisis. In the absence of unequivocal hyperglycemia, confirm an abnormal result with repeat testing. Use local criteria and clinical context." },
+        { "type": "list", "items": ["Check for dehydration, ketones, altered mental state, vomiting, abdominal pain, deep breathing, infection, or hemodynamic instability.", "Record weight/BMI, blood pressure, current medicines, cardiovascular risk, and relevant family and social history.", "At diagnosis, assess renal function, urine albumin, lipids, foot risk, and eye-screening needs. HbA1c reflects longer-term glycemia but may be unreliable in some conditions affecting red-cell turnover."] }
+      ]
+    },
+    {
+      "heading": "4. Long-Term Complications",
+      "blocks": [
+        { "type": "list", "items": ["Microvascular complications include retinopathy, nephropathy, and peripheral or autonomic neuropathy.", "Macrovascular disease includes coronary artery disease, stroke, and peripheral arterial disease.", "Other concerns include diabetic foot ulceration, infection, impaired wound healing, and psychosocial burden.", "Regular review should include individualized glycemic targets, blood pressure and lipid risk, renal assessment, retinal screening, foot examination, vaccination, and support for self-management."] }
+      ]
+    },
+    {
+      "heading": "5. Management Principles",
+      "blocks": [
+        { "type": "paragraph", "text": "Set an individualized care plan with the patient. Consider diabetes type, age, pregnancy, kidney and cardiovascular disease, hypoglycemia risk, resources, preferences, and the current national guideline." },
+        { "type": "list", "items": ["Education, nutrition support, physical activity, tobacco cessation, and achievable behavior changes are foundational.", "Type 1 diabetes requires insulin replacement and structured education on glucose monitoring, sick-day care, and hypoglycemia prevention.", "For type 2 diabetes, choose glucose-lowering therapy based on glycemic needs, cardiovascular/renal conditions, contraindications, adverse effects, affordability, and local protocols.", "Review medication use and adherence, hypoglycemia, glucose/HbA1c trends, complications, and the need to intensify or de-intensify treatment.", "Do not use one glycemic target or medicine plan for every patient; pregnancy and acute illness require specific clinical pathways."] }
+      ]
+    },
+    {
+      "heading": "6. Hypoglycemia",
+      "blocks": [
+        { "type": "callout", "tone": "highlight", "title": "Recognize and prevent low blood glucose", "items": ["Possible symptoms include sweating, tremor, hunger, palpitations, confusion, behavior change, seizure, or loss of consciousness.", "If the person is conscious and can swallow safely, follow the local hypoglycemia protocol and recheck glucose. Do not give food or drink by mouth to someone with impaired consciousness.", "Severe hypoglycemia needs urgent assistance and treatment according to the available protocol. Review the trigger and adjust the prevention plan with a clinician."] }
+      ]
+    },
+    {
+      "heading": "7. DKA and HHS",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Hyperglycemic crises require urgent hospital assessment", "items": ["DKA commonly involves hyperglycemia, ketonemia/ketonuria, and metabolic acidosis; it can occur in type 1 and sometimes type 2 diabetes.", "HHS typically presents with profound hyperglycemia, dehydration, and hyperosmolality, often with marked neurological changes and little or no significant ketosis.", "Look for vomiting, abdominal pain, deep breathing, dehydration, hypotension, confusion, or reduced consciousness. Check glucose, ketones, electrolytes, renal function, acid-base status, and precipitating illness.", "Management requires close monitoring and protocol-based fluid, insulin, electrolyte, and precipitant management by trained clinicians."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "When should an abnormal diabetes test be repeated for confirmation?", "answer": "If there is no unequivocal hyperglycemia or hyperglycemic crisis, confirm an abnormal result with repeat testing, using the applicable local diagnostic guidance." }, { "question": "Name three important routine complication screens.", "answer": "Retinal screening, urine albumin/renal assessment, and a structured foot examination are important; also assess cardiovascular risk." }, { "question": "Which feature helps distinguish DKA from HHS?", "answer": "DKA is characterized by significant ketosis and metabolic acidosis; HHS is dominated by severe hyperglycemia, dehydration, and hyperosmolality." }] },
+        { "type": "quiz", "question": "A person with diabetes has vomiting, deep breathing, and ketones. What should be suspected?", "answer": "Diabetic ketoacidosis (DKA), a medical emergency requiring urgent hospital assessment." }
+      ]
+    }
+  ]
+}

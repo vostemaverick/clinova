@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curriculum study notes for Clinical Medicine students.">
+  <title>Curriculum Study Note | ClinStudy.ke</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="notes-page">
+  <header class="notes-header">
+    <a href="index.html">← ClinStudy.ke</a>
+    <span>Clinical Medicine | Curriculum Study Notes</span>
+    <a class="notes-revision-link" href="revision.html">Revision Studio</a>
+  </header>
+  <main class="notes-content curriculum-content">
+    <p id="curriculum-status" class="topic-status" role="status" aria-live="polite">Loading curriculum note...</p>
+    <article id="curriculum-article" hidden>
+      <div class="topic-heading">
+        <p id="curriculum-meta" class="topic-meta"></p>
+        <h1 id="curriculum-title"></h1>
+        <p id="curriculum-description" class="topic-description"></p>
+      </div>
+      <section class="notes-section" aria-labelledby="study-note-heading">
+        <h2 id="study-note-heading">Curriculum study note</h2>
+        <p id="curriculum-note"></p>
+      </section>
+      <div class="curriculum-actions">
+        <button type="button" id="reviewed-button" class="revision-primary" aria-pressed="false">Mark as reviewed</button>
+        <span id="reviewed-status" role="status" aria-live="polite"></span>
+      </div>
+      <nav class="curriculum-navigation" aria-label="Topics in this subject">
+        <a id="previous-topic" class="revision-secondary" href="#">← Previous topic</a>
+        <label for="subject-topic-select">Go to another topic</label>
+        <select id="subject-topic-select"></select>
+        <a id="next-topic" class="revision-secondary" href="#">Next topic →</a>
+      </nav>
+      <p class="curriculum-disclaimer">This is a concise curriculum study note, not a complete clinical guideline. Use your institution's approved materials and current local protocols for detailed learning and clinical decisions.</p>
+    </article>
+  </main>
+  <script>
+    const query = new URLSearchParams(window.location.search);
+    const subjectName = query.get('subject');
+    const topicName = query.get('topic');
+    const statusElement = document.getElementById('curriculum-status');
+    const articleElement = document.getElementById('curriculum-article');
+    const reviewedButton = document.getElementById('reviewed-button');
+    const reviewedStatus = document.getElementById('reviewed-status');
+    const topicSelect = document.getElementById('subject-topic-select');
+    const progressKey = 'clinstudy-curriculum-reviewed-v1';
+
+    function normalize(value) {
+      return value.trim().toLocaleLowerCase();
+    }
+
+    function topicUrl(subject, title) {
+      return `curriculum.html?subject=${encodeURIComponent(subject)}&topic=${encodeURIComponent(title)}`;
+    }
+
+    function setReviewed(reviewed, key) {
+      let progress;
+      try {
+        progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+        if (!progress || typeof progress !== 'object' || Array.isArray(progress)) progress = {};
+        if (reviewed) progress[key] = true;
+        else delete progress[key];
+        localStorage.setItem(progressKey, JSON.stringify(progress));
+        reviewedButton.setAttribute('aria-pressed', String(reviewed));
+        reviewedButton.textContent = reviewed ? 'Reviewed ✓' : 'Mark as reviewed';
+        reviewedStatus.textContent = reviewed ? 'Review progress saved on this device.' : 'Review mark removed.';
+      } catch (error) {
+        reviewedStatus.textContent = 'Review progress could not be saved in this browser.';
+      }
+    }
+
+    async function loadCurriculumNote() {
+      if (!subjectName || !topicName) {
+        statusElement.textContent = 'Choose a topic from the course map to open its study note.';
+        return;
+      }
+
+      try {
+        const [mapResponse, notesResponse] = await Promise.all([
+          fetch('topics/course-map.json'),
+          fetch('topics/course-notes.json')
+        ]);
+        if (!mapResponse.ok || !notesResponse.ok) throw new Error('Curriculum files could not be loaded.');
+        const [courseMap, courseNotes] = await Promise.all([mapResponse.json(), notesResponse.json()]);
+        const subject = courseMap.groups
+          .flatMap((group) => group.topics)
+          .find((entry) => normalize(entry.title) === normalize(subjectName));
+        if (!subject) {
+          statusElement.textContent = 'This curriculum subject could not be found. Return to the course map and choose a listed topic.';
+          return;
+        }
+
+        const selectedIndex = subject.items.findIndex((item) => normalize(item) === normalize(topicName));
+        if (selectedIndex < 0) {
+          statusElement.textContent = 'This curriculum topic could not be found. Return to the course map and choose a listed topic.';
+          return;
+        }
+
+        const title = subject.items[selectedIndex];
+        const note = courseNotes.subjects
+          .find((entry) => normalize(entry.title) === normalize(subject.title))
+          ?.notes.find((entry) => normalize(entry.title) === normalize(title));
+        if (!note) throw new Error(`Study note unavailable for ${title}.`);
+
+        document.title = `${title} | Curriculum Notes | ClinStudy.ke`;
+        document.getElementById('curriculum-meta').textContent = subject.title;
+        document.getElementById('curriculum-title').textContent = title;
+        document.getElementById('curriculum-description').textContent = `Course-map topic in ${subject.title}.`;
+        document.getElementById('curriculum-note').textContent = note.text;
+
+        subject.items.forEach((item, index) => {
+          const option = document.createElement('option');
+          option.value = String(index);
+          option.textContent = item;
+          option.selected = index === selectedIndex;
+          topicSelect.append(option);
+        });
+        topicSelect.addEventListener('change', () => {
+          const selectedTopic = subject.items[Number(topicSelect.value)];
+          if (selectedTopic) window.location.href = topicUrl(subject.title, selectedTopic);
+        });
+
+        const previous = subject.items[selectedIndex - 1];
+        const next = subject.items[selectedIndex + 1];
+        const previousLink = document.getElementById('previous-topic');
+        const nextLink = document.getElementById('next-topic');
+        if (previous) previousLink.href = topicUrl(subject.title, previous);
+        else previousLink.hidden = true;
+        if (next) nextLink.href = topicUrl(subject.title, next);
+        else nextLink.hidden = true;
+
+        const progressId = `${normalize(subject.title)}|${normalize(title)}`;
+        let progress = {};
+        try {
+          progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+        } catch (error) {
+          reviewedStatus.textContent = 'Saved review progress could not be read.';
+        }
+        if (progress && typeof progress === 'object' && progress[progressId]) {
+          reviewedButton.setAttribute('aria-pressed', 'true');
+          reviewedButton.textContent = 'Reviewed ✓';
+          reviewedStatus.textContent = 'Review progress saved on this device.';
+        }
+        reviewedButton.addEventListener('click', () => {
+          setReviewed(reviewedButton.getAttribute('aria-pressed') !== 'true', progressId);
+        });
+
+        statusElement.hidden = true;
+        articleElement.hidden = false;
+      } catch (error) {
+        statusElement.textContent = 'Curriculum notes could not be loaded. Open the site through a web server and try again.';
+      }
+    }
+
+    loadCurriculumNote();
+  </script>
+</body>
+</html>

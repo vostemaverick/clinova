@@ -1,0 +1,62 @@
+{
+  "id": "asthma-copd",
+  "title": "Asthma and COPD",
+  "pageTitle": "Asthma and COPD - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Obstructive airway disease, distinguishing features, spirometry, long-term care, exacerbations, and urgent warning signs.",
+  "icon": "🫁",
+  "summary": "Compare variable asthma with persistent COPD airflow limitation and recognize acute respiratory danger signs.",
+  "coverage": ["History, examination, and key differences", "Spirometry and differential diagnosis", "Controller treatment, prevention, and exacerbation assessment"],
+  "sections": [
+    {
+      "heading": "1. Definitions and Differences",
+      "blocks": [
+        { "type": "table", "headers": ["Feature", "Asthma", "COPD"], "rows": [["Typical pattern", "Variable respiratory symptoms and variable expiratory airflow limitation", "Persistent respiratory symptoms with persistent airflow limitation"], ["Common context", "Often begins earlier; atopy or triggers may be present, but can occur at any age", "Usually associated with cumulative exposure to tobacco smoke, biomass fuel, occupational dusts, or fumes"], ["Course", "Symptoms and airflow obstruction often vary over time", "Usually progressive; exacerbations may occur"], ["Testing", "Demonstrate variable expiratory airflow where possible", "Post-bronchodilator obstruction on spirometry supports diagnosis; interpret the FEV1/FVC ratio with the full clinical context and local standard"]] }
+      ]
+    },
+    {
+      "heading": "2. Clinical Assessment",
+      "blocks": [
+        { "type": "list", "items": ["Ask about wheeze, cough, chest tightness, dyspnea, nocturnal symptoms, variability, triggers, exacerbations, activity limitation, and response to prior treatment.", "Ask about smoking and second-hand smoke, cooking fuel, occupational exposures, allergies, childhood symptoms, prior admissions, inhaler access and technique, and medicines.", "Examine respiratory rate, work of breathing, oxygen saturation, chest expansion, breath sounds, and signs of complications or alternative diagnoses.", "Consider heart failure, pneumonia, tuberculosis, bronchiectasis, upper-airway disease, pulmonary embolism, and other causes of breathlessness."] }
+      ]
+    },
+    {
+      "heading": "3. Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Spirometry before and after bronchodilator is central to confirming persistent obstruction and may demonstrate variable airflow limitation. Repeat testing or use peak-flow monitoring when initial results do not settle the diagnosis.", "A chest radiograph is not diagnostic of asthma or uncomplicated COPD but can identify alternative diagnoses or complications when indicated.", "Pulse oximetry, blood gas testing, ECG, or additional investigations are guided by severity, hypoxia, suspected complications, and clinical context.", "Consider full blood count, eosinophils, alpha-1 antitrypsin testing, or other targeted tests when the presentation or course suggests a specific cause or phenotype."] }
+      ]
+    },
+    {
+      "heading": "4. Long-Term Asthma Management",
+      "blocks": [
+        { "type": "list", "items": ["Use an inhaled corticosteroid-containing strategy for asthma; a short-acting bronchodilator alone is not an adequate long-term anti-inflammatory plan.", "Select an age-appropriate controller and reliever approach under current asthma guidance; do not copy a regimen without checking the current local protocol.", "Check inhaler technique, adherence, access, triggers, comorbidities, and the written action plan before stepping treatment up.", "Support trigger reduction, smoking avoidance, vaccination as locally recommended, and regular review of symptom control and exacerbation risk."] }
+      ]
+    },
+    {
+      "heading": "5. Long-Term COPD Management",
+      "blocks": [
+        { "type": "list", "items": ["Smoking cessation and reducing harmful exposure are key interventions; offer support rather than blame.", "Inhaled long-acting bronchodilators are central to symptom management; add or select inhaled corticosteroid therapy for appropriate patients based on exacerbations, eosinophils, asthma features, and guideline advice.", "Teach inhaler technique and adherence; consider pulmonary rehabilitation, physical activity, nutrition support, and vaccination according to local guidance.", "Assess exacerbation history, breathlessness, oxygenation, comorbidities, and need for specialist review or oxygen assessment."] }
+      ]
+    },
+    {
+      "heading": "6. Acute Exacerbations and Danger Signs",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Acute severe asthma or COPD exacerbation can be life-threatening", "items": ["Urgent warning signs include inability to speak full sentences, exhaustion, altered consciousness, cyanosis, silent/poor air entry, severe work of breathing, hypoxia, or hemodynamic instability.", "Assess severity and oxygenation promptly. Treatment may include inhaled bronchodilators, controlled oxygen when indicated, systemic corticosteroids, and additional protocol-directed therapy.", "In COPD, titrate oxygen to the target specified by local guidance when hypercapnic respiratory failure is a risk; obtain blood gases when indicated.", "Consider pneumonia, pneumothorax, pulmonary embolism, heart failure, and other precipitating causes. Escalate early if response is poor."] }
+      ]
+    },
+    {
+      "heading": "7. Inhaler Technique and Follow-Up",
+      "blocks": [
+        { "type": "list", "items": ["Demonstrate the inhaler, ask the patient to show their technique, and correct errors using teach-back.", "A spacer may improve delivery for selected pressurized metered-dose inhalers; confirm suitability and cleaning instructions.", "Review symptom control, night waking, activity limitation, reliever use, exacerbations, adherence, technique, adverse effects, and the action plan at follow-up.", "Provide clear instructions for seeking urgent care and ensure the patient knows which inhaler is for regular control and which is for relief."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What pattern of airflow limitation is characteristic of asthma?", "answer": "Variable expiratory airflow limitation, often with symptoms that vary over time or with triggers." }, { "question": "What test supports a diagnosis of COPD?", "answer": "Spirometry demonstrating persistent post-bronchodilator airflow obstruction in the appropriate clinical context." }, { "question": "Name three dangerous signs during an acute exacerbation.", "answer": "Examples include inability to speak, exhaustion, altered consciousness, cyanosis, silent chest/poor air entry, severe work of breathing, or hypoxia." }] },
+        { "type": "quiz", "question": "A patient with asthma is using a reliever frequently but has no anti-inflammatory controller. What should be reviewed?", "answer": "Assess control, adherence, access, inhaler technique, and provide an appropriate inhaled corticosteroid-containing treatment plan using current local asthma guidance." }
+      ]
+    }
+  ]
+}

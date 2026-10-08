@@ -1,0 +1,65 @@
+{
+  "id": "hypertension",
+  "title": "Hypertension",
+  "pageTitle": "Hypertension - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Blood-pressure assessment, causes, target-organ effects, investigations, long-term management principles, and urgent presentations.",
+  "icon": "🫀",
+  "summary": "Accurate blood-pressure measurement, cardiovascular risk, target-organ assessment, and treatment principles.",
+  "coverage": ["Classification and confirmation of raised blood pressure", "Risk factors, causes, and target-organ assessment", "Lifestyle, medicines, complications, and emergencies"],
+  "sections": [
+    {
+      "heading": "1. Definition and Classification",
+      "blocks": [
+        { "type": "paragraph", "text": "Hypertension is persistently elevated systemic arterial blood pressure. Diagnostic thresholds and treatment targets vary with the measurement setting, age, comorbidity, and current national guidance; confirm the applicable local standard before applying a numeric threshold." },
+        { "type": "list", "items": ["Primary (essential) hypertension has no single identifiable cause and is the commonest form.", "Secondary hypertension results from an identifiable cause, such as renal disease, endocrine disease, sleep-disordered breathing, or a medicine/substance.", "Classify blood pressure using the locally adopted guideline and distinguish clinic, home, and ambulatory readings."] }
+      ]
+    },
+    {
+      "heading": "2. Risk Factors and Pathophysiology",
+      "blocks": [
+        { "type": "list", "items": ["Risk factors include increasing age, family history, excess dietary sodium, low physical activity, excess weight, harmful alcohol use, tobacco exposure, and diabetes or kidney disease.", "Increased peripheral vascular resistance, altered renal sodium handling, neurohormonal activation, and vascular remodeling contribute to sustained pressure elevation.", "Long-standing hypertension damages vascular endothelium and accelerates atherosclerotic and small-vessel disease."] }
+      ]
+    },
+    {
+      "heading": "3. Clinical Features and Complications",
+      "blocks": [
+        { "type": "paragraph", "text": "Hypertension is often asymptomatic and is usually found by measurement. Headache or dizziness alone does not establish the diagnosis. Ask about symptoms that may indicate target-organ injury, including chest pain, breathlessness, focal neurological symptoms, visual change, confusion, or reduced urine output." },
+        { "type": "list", "items": ["Complications include stroke, coronary artery disease, heart failure, chronic kidney disease, retinopathy, peripheral arterial disease, and cognitive impairment.", "Examine for cardiovascular disease, pulse abnormalities, neurological deficits, volume overload, and signs of secondary causes as clinically indicated."] }
+      ]
+    },
+    {
+      "heading": "4. Blood-Pressure Measurement and Diagnosis",
+      "blocks": [
+        { "type": "list", "items": ["Use a validated device and correctly sized cuff on a supported arm; allow the patient to rest quietly and avoid measurement immediately after exertion, smoking, or caffeine.", "Take repeat readings with good technique. Measure both arms initially; use the arm with the higher consistent reading for follow-up.", "Confirm persistent elevation on separate occasions or with home/ambulatory monitoring when available and appropriate.", "Consider white-coat and masked hypertension. Assess adherence, medicines, substances, pregnancy status, and symptoms before interpreting readings."] }
+      ]
+    },
+    {
+      "heading": "5. Initial Investigations and Risk Assessment",
+      "blocks": [
+        { "type": "list", "items": ["Assess overall cardiovascular risk, prior cardiovascular disease, diabetes, kidney disease, smoking, family history, diet, activity, and current medicines.", "Common baseline tests include urinalysis or urine albumin assessment, serum creatinine/eGFR and electrolytes, glucose or HbA1c, lipids, and an ECG.", "Examine the fundi when feasible, particularly with severe elevation or visual symptoms. Investigate for secondary causes when suggested by age, onset, severity, resistant hypertension, examination, or laboratory findings.", "Use investigations to assess organ effects and inform safe treatment; tailor the panel to local guidance and patient context."] }
+      ]
+    },
+    {
+      "heading": "6. Management Principles",
+      "blocks": [
+        { "type": "paragraph", "text": "Agree an individualized plan based on confirmed measurements, cardiovascular risk, comorbidities, pregnancy status, adverse-effect risk, and the current local guideline. Explain that treatment is usually long term and requires follow-up." },
+        { "type": "list", "items": ["Lifestyle measures include reducing excess salt, eating a balanced diet, regular physical activity, weight management where appropriate, avoiding tobacco, and limiting harmful alcohol use.", "Antihypertensive drug classes commonly include thiazide-like diuretics, ACE inhibitors or ARBs, and calcium-channel blockers. Selection and combination depend on the patient and local protocol.", "Check renal function and electrolytes when indicated after starting or adjusting medicines. Review adherence, adverse effects, interacting medicines, and response before intensifying therapy.", "Avoid ACE inhibitors and ARBs in pregnancy; pregnancy-associated hypertension needs prompt assessment and pregnancy-specific management.", "For resistant hypertension, first check measurement technique, adherence, interfering substances, and secondary causes before specialist-guided escalation."] }
+      ]
+    },
+    {
+      "heading": "7. Hypertensive Emergency",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Severe blood pressure with acute target-organ injury is an emergency", "items": ["Possible injury includes encephalopathy, stroke, acute coronary syndrome, acute heart failure/pulmonary edema, aortic dissection, acute kidney injury, or severe retinopathy.", "Arrange urgent emergency assessment and monitored management. The rate and extent of pressure reduction depend on the organ injury; overly rapid reduction can cause harm.", "A high reading without acute organ injury still needs timely clinical review, repeat accurate measurement, and a safe follow-up plan."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "Why should an elevated clinic blood pressure usually be confirmed?", "answer": "Repeat or out-of-office measurements help confirm persistent hypertension and identify white-coat or masked hypertension." }, { "question": "Name common organs affected by long-standing hypertension.", "answer": "The brain, heart, kidneys, retina, and peripheral arteries are commonly affected." }, { "question": "What distinguishes a hypertensive emergency from an isolated high reading?", "answer": "A hypertensive emergency involves acute target-organ injury and requires urgent monitored assessment and treatment." }] },
+        { "type": "quiz", "question": "A patient has a very high blood-pressure reading, new breathlessness, and pulmonary edema. What is the priority?", "answer": "Treat as a possible hypertensive emergency with acute target-organ injury and arrange urgent monitored emergency care." }
+      ]
+    }
+  ]
+}

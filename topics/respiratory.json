@@ -1,0 +1,58 @@
+{
+  "id": "respiratory",
+  "title": "Respiratory Medicine",
+  "pageTitle": "Respiratory Medicine - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "A systematic approach to respiratory symptoms, examination, investigations, common syndromes, and respiratory emergencies.",
+  "icon": "🫁",
+  "summary": "Assess cough and breathlessness, interpret core investigations, and recognize respiratory failure and urgent disease.",
+  "coverage": ["Respiratory history and examination", "Imaging, spirometry, oxygenation, and microbiology", "Obstructive disease, infection, tuberculosis, and emergencies"],
+  "sections": [
+    {
+      "heading": "1. Respiratory History and Examination",
+      "blocks": [
+        { "type": "list", "items": ["Clarify dyspnea, cough, sputum, wheeze, chest pain, hemoptysis, fever, weight loss, night sweats, onset, progression, and functional effect.", "Ask about smoking and second-hand smoke, biomass fuel, occupational exposures, tuberculosis contact, travel, allergies, prior lung disease, medicines, and vaccination.", "Assess respiratory rate, work of breathing, oxygen saturation, speech, cyanosis, chest expansion, percussion, breath sounds, and signs of consolidation, effusion, or chronic disease.", "Consider cardiac, hematologic, metabolic, and psychological causes of breathlessness as well as pulmonary causes."] }
+      ]
+    },
+    {
+      "heading": "2. Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Chest radiography can identify consolidation, effusion, edema, collapse, mass, or other abnormalities but must be interpreted with clinical findings.", "Spirometry is used to assess airflow obstruction and response to bronchodilator; ensure acceptable test quality and interpret against appropriate reference standards.", "Pulse oximetry estimates oxygen saturation but does not measure carbon dioxide or acid-base status. Blood gases are indicated in selected severe illness or suspected ventilatory failure.", "Microbiology and tuberculosis tests depend on syndrome, exposure, severity, and local guidance; collect and handle specimens safely.", "CT imaging, peak-flow monitoring, pulmonary function tests, or bronchoscopy are selected for specific diagnostic questions and may require specialist input."] }
+      ]
+    },
+    {
+      "heading": "3. Obstructive Airway Disease",
+      "blocks": [
+        { "type": "paragraph", "text": "Asthma typically has variable symptoms and variable expiratory airflow limitation. COPD is associated with persistent respiratory symptoms and persistent airflow obstruction, usually in the context of relevant exposures. Clinical history and spirometry help distinguish and identify overlap." },
+        { "type": "list", "items": ["Check inhaler technique, adherence, triggers, exacerbations, smoking or biomass exposure, and comorbidities.", "Asthma care requires an inhaled corticosteroid-containing strategy. COPD care prioritizes exposure reduction, smoking cessation support, bronchodilation, and prevention of exacerbations.", "Use the dedicated Asthma and COPD notes and current national guidance for detailed assessment and treatment pathways."] }
+      ]
+    },
+    {
+      "heading": "4. Respiratory Infection and Tuberculosis",
+      "blocks": [
+        { "type": "list", "items": ["Pneumonia may present with cough, fever, sputum, dyspnea, pleuritic pain, tachypnea, or focal chest signs; assess severity and oxygenation.", "Tuberculosis should be considered with persistent cough, hemoptysis, weight loss, fever, night sweats, relevant exposure, or compatible imaging, especially in high-burden settings.", "Use appropriate infection prevention and current local testing pathways. Consider HIV status and other immunocompromising conditions as clinically appropriate.", "Use antimicrobial stewardship and interpret tests in the context of disease severity and local epidemiology."] }
+      ]
+    },
+    {
+      "heading": "5. Pleural and Vascular Disease",
+      "blocks": [
+        { "type": "paragraph", "text": "Pleural effusion may cause dyspnea, reduced chest expansion, stony dullness, and reduced breath sounds. Pneumothorax may cause sudden unilateral pleuritic pain and breathlessness with reduced breath sounds and hyperresonance." },
+        { "type": "list", "items": ["Pulmonary embolism can present with sudden dyspnea, pleuritic pain, tachycardia, hypoxia, syncope, or hemoptysis; assess pretest probability and investigate through the local pathway.", "Tension pneumothorax with respiratory or circulatory compromise is an emergency; call for urgent skilled intervention.", "A unilateral effusion, recurrent effusion, suspected empyema, or unexplained pleural disease needs timely investigation and often specialist review."] }
+      ]
+    },
+    {
+      "heading": "6. Acute Respiratory Failure and Initial Stabilization",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Escalate immediately for severe respiratory distress", "items": ["Danger signs include inability to speak, exhaustion, altered consciousness, cyanosis, silent chest, severe work of breathing, hypoxia, shock, or rapidly rising oxygen needs.", "Use an airway-breathing-circulation approach, call for help, monitor vital signs, and treat reversible causes under local emergency protocols.", "Give oxygen for hypoxemia and use the locally specified target; some patients at risk of hypercapnic respiratory failure need controlled oxygen and blood-gas assessment.", "Reassess after every intervention and escalate early if the response is inadequate."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What does spirometry help establish in obstructive respiratory disease?", "answer": "It assesses airflow limitation and can help distinguish variable obstruction from persistent post-bronchodilator obstruction when interpreted with the clinical history." }, { "question": "What is the limitation of pulse oximetry?", "answer": "It estimates oxygen saturation but does not assess carbon dioxide or acid-base status." }, { "question": "Name three respiratory danger signs.", "answer": "Examples include inability to speak, exhaustion, altered consciousness, cyanosis, silent chest, severe work of breathing, or hypoxia." }] },
+        { "type": "quiz", "question": "A breathless patient is drowsy with cyanosis and poor air entry. What is the priority?", "answer": "Call for emergency help, assess and support airway and breathing, monitor oxygenation and circulation, and urgently escalate for possible respiratory failure." }
+      ]
+    }
+  ]
+}

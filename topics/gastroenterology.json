@@ -1,0 +1,58 @@
+{
+  "id": "gastroenterology",
+  "title": "Gastroenterology and Hepatology",
+  "pageTitle": "Gastroenterology and Hepatology - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Assessment of gastrointestinal and liver symptoms, common syndromes, investigations, complications, and urgent warning signs.",
+  "icon": "🩺",
+  "summary": "Approach abdominal symptoms, gastrointestinal bleeding, jaundice, chronic liver disease, and digestive investigations.",
+  "coverage": ["Abdominal history, examination, and investigation", "Jaundice, liver disease, and gastrointestinal bleeding", "Acute abdomen, complications, and referral"],
+  "sections": [
+    {
+      "heading": "1. Gastrointestinal History and Examination",
+      "blocks": [
+        { "type": "list", "items": ["Characterize pain by site, onset, duration, radiation, severity, progression, and relation to meals, bowel movements, or movement.", "Ask about nausea, vomiting, dysphagia, reflux, bowel habit, stool appearance, rectal bleeding, weight change, appetite, fever, jaundice, pruritus, and urine color.", "Review alcohol, medicines including NSAIDs, diet, travel, infection exposure, prior surgery, family history, and pregnancy possibility where relevant.", "Examine hydration, pallor, jaundice, abdomen, masses, organ enlargement, ascites, bowel sounds, and rectal findings when indicated and with consent."] }
+      ]
+    },
+    {
+      "heading": "2. Abdominal Pain and Acute Abdomen",
+      "blocks": [
+        { "type": "paragraph", "text": "Abdominal pain ranges from self-limited illness to surgical or vascular emergencies. Localize the pain and interpret it with vital signs, examination, pregnancy status, and associated symptoms." },
+        { "type": "callout", "tone": "danger", "title": "Red flags require urgent assessment", "items": ["Shock, guarding or rigidity, rebound tenderness, severe or rapidly worsening pain, persistent vomiting, gastrointestinal bleeding, distension with obstipation, or suspected ectopic pregnancy needs urgent evaluation.", "Consider perforation, obstruction, appendicitis, pancreatitis, biliary disease, mesenteric ischemia, ectopic pregnancy, and non-abdominal causes.", "Stabilize and refer according to local emergency pathways; do not delay escalation for a complete routine work-up."] }
+      ]
+    },
+    {
+      "heading": "3. Gastrointestinal Bleeding",
+      "blocks": [
+        { "type": "list", "items": ["Hematemesis or coffee-ground vomit suggests upper gastrointestinal bleeding; melena is black tarry stool, while bright rectal bleeding often arises lower but can occur with brisk upper bleeding.", "Assess airway, breathing, circulation, hemodynamic status, ongoing blood loss, anticoagulants, liver disease, and comorbidities.", "Urgent management may require resuscitation, blood tests and grouping/crossmatching, medication review, and endoscopy or referral using current local protocol.", "An unstable patient or ongoing significant bleed is an emergency."] }
+      ]
+    },
+    {
+      "heading": "4. Jaundice and Liver Disease",
+      "blocks": [
+        { "type": "paragraph", "text": "Jaundice reflects raised bilirubin and may arise before the liver (hemolysis), within the liver (hepatocellular disease), or after the liver (cholestasis/obstruction). Dark urine, pale stool, pruritus, pain, fever, and weight loss help guide the differential." },
+        { "type": "list", "items": ["Assess alcohol and viral hepatitis risk, medicines and herbal products, metabolic risk, travel, transfusions, family history, and prior liver disease.", "Look for hepatomegaly, splenomegaly, ascites, edema, bruising, encephalopathy, and signs of chronic liver disease.", "Interpret bilirubin, aminotransferases, alkaline phosphatase, albumin, and clotting results as a pattern; ultrasound is often a first-line investigation for suspected biliary obstruction.", "Acute jaundice with confusion, bleeding, sepsis, severe abdominal pain, or pregnancy requires urgent clinical review."] }
+      ]
+    },
+    {
+      "heading": "5. Common Digestive Syndromes and Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Dysphagia, persistent vomiting, unexplained weight loss, iron-deficiency anemia, a mass, or persistent gastrointestinal bleeding are alarm features requiring timely investigation.", "Diarrhea assessment considers hydration, duration, fever, blood, recent antibiotics, exposure, and immunocompromise; severe dehydration or dysentery needs urgent care.", "Pancreatitis commonly presents with persistent severe upper abdominal pain and vomiting; assess severity, causes, and complications using local pathways.", "Select stool tests, endoscopy, ultrasound, CT, or other investigations according to the clinical question and stability."] }
+      ]
+    },
+    {
+      "heading": "6. Management Principles and Prevention",
+      "blocks": [
+        { "type": "list", "items": ["Management depends on the cause and severity; support hydration and nutrition and review medicines that may injure the gastrointestinal tract or liver.", "Use pathogen-specific or antimicrobial treatment only when indicated and in line with current local guidance.", "Promote safe food and water, hand hygiene, hepatitis vaccination where indicated, reduced harmful alcohol use, and appropriate screening or follow-up.", "Refer for persistent unexplained symptoms, alarm features, suspected malignancy, decompensated liver disease, or complex inflammatory disease."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "How can the broad causes of jaundice be classified?", "answer": "Pre-hepatic (such as hemolysis), hepatocellular/intrahepatic, and post-hepatic/cholestatic causes." }, { "question": "What does melena usually describe?", "answer": "Black, tarry stool caused by digested blood, often from an upper gastrointestinal source; brisk bleeding can alter the presentation." }, { "question": "Name three abdominal red flags.", "answer": "Examples include shock, peritonism, severe worsening pain, persistent vomiting, significant bleeding, or obstruction." }] },
+        { "type": "quiz", "question": "A patient with jaundice becomes confused and develops abnormal bleeding. What is the priority?", "answer": "Urgent hospital assessment for severe liver dysfunction and complications, with stabilization and specialist escalation." }
+      ]
+    }
+  ]
+}

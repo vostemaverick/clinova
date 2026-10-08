@@ -217,6 +217,10 @@
   font-size: 13px;
 }
 
+.course-map-subject li[hidden] {
+  display: none;
+}
+
 .course-map-item-row {
   display: flex;
   align-items: start;
@@ -224,8 +228,34 @@
   gap: 10px;
 }
 
-.course-map-item-row > span:first-child {
+.course-map-item-row > :first-child {
   min-width: 0;
+}
+
+.course-map-topic-link {
+  min-width: 0;
+  color: #4e4648;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.course-map-topic-link:hover {
+  color: #800020;
+}
+
+.course-map-topic-link:focus-visible,
+.course-map-note-link:focus-visible {
+  outline: 3px solid #c77f96;
+  outline-offset: 2px;
+}
+
+.course-map-note-link {
+  display: inline-block;
+  margin: 5px 0 0 2px;
+  color: #800020;
+  font-size: 12px;
+  font-weight: bold;
+  text-underline-offset: 2px;
 }
 
 .course-map-note-details {
@@ -756,6 +786,74 @@
 .guideline-note a {
   color: #800020;
   font-weight: bold;
+}
+
+.curriculum-content {
+  max-width: 900px;
+}
+
+.curriculum-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.curriculum-actions button {
+  border-radius: 5px;
+}
+
+.curriculum-actions button:focus-visible,
+.curriculum-navigation a:focus-visible,
+.curriculum-navigation select:focus-visible {
+  outline: 3px solid #c77f96;
+  outline-offset: 2px;
+}
+
+.curriculum-navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #eadde1;
+}
+
+.curriculum-navigation a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.curriculum-navigation a[hidden] {
+  display: none;
+}
+
+.curriculum-navigation label {
+  color: #4b2632;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.curriculum-navigation select {
+  min-width: min(100%, 220px);
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #c9aab4;
+  border-radius: 5px;
+  background: white;
+  color: #292426;
+  font: inherit;
+}
+
+.curriculum-disclaimer {
+  margin: 24px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #eadde1;
+  color: #62585b;
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {

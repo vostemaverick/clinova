@@ -1,0 +1,58 @@
+{
+  "id": "renal",
+  "title": "Renal and Urinary Medicine",
+  "pageTitle": "Renal and Urinary Medicine - Clinical Study Notes",
+  "subject": "Medicine",
+  "level": "Core Clinical Medicine",
+  "description": "Assessment of kidney and urinary disorders, urinalysis, acute and chronic kidney disease, complications, and urgent presentations.",
+  "icon": "🫘",
+  "summary": "Interpret renal symptoms and tests, recognize AKI and CKD, and identify electrolyte and urinary emergencies.",
+  "coverage": ["Renal history, examination, urinalysis, and kidney function", "Acute kidney injury, chronic kidney disease, and urine syndromes", "Electrolyte complications, obstruction, and referral"],
+  "sections": [
+    {
+      "heading": "1. Renal History and Examination",
+      "blocks": [
+        { "type": "list", "items": ["Ask about urine volume, frequency, nocturia, dysuria, urgency, hematuria, frothy urine, flank pain, edema, breathlessness, and systemic symptoms.", "Review diabetes, hypertension, vascular or autoimmune disease, family history, pregnancy, recent illness, hydration, urinary obstruction symptoms, and kidney-toxic medicines.", "Assess blood pressure, volume status, edema, bladder distension, flank tenderness, rash, joint findings, and signs of systemic disease.", "Establish baseline kidney function and timeline: an acute change and a chronic abnormality require different assessment."] }
+      ]
+    },
+    {
+      "heading": "2. Urinalysis and Kidney Investigations",
+      "blocks": [
+        { "type": "list", "items": ["Interpret serum creatinine/eGFR trends with hydration, muscle mass, medicines, and baseline; eGFR is less reliable when kidney function is changing rapidly.", "Urinalysis may detect blood, protein, leukocytes, nitrites, glucose, or ketones; confirm and quantify abnormalities according to local practice.", "Urine albumin-to-creatinine ratio helps assess kidney damage and risk in appropriate patients. Microscopy and culture are guided by symptoms and findings.", "Renal ultrasound can assess kidney size, anatomy, and obstruction. Additional serology, imaging, or biopsy is selected for a specific differential and often requires specialist input."] }
+      ]
+    },
+    {
+      "heading": "3. Acute Kidney Injury",
+      "blocks": [
+        { "type": "paragraph", "text": "Acute kidney injury (AKI) is an acute decline in kidney function. Think systematically of pre-renal reduced perfusion, intrinsic renal injury, and post-renal obstruction; more than one mechanism may coexist." },
+        { "type": "list", "items": ["Review recent creatinine and urine output, volume status, infection, blood loss, cardiac function, nephrotoxic medicines, and possible obstruction.", "Check electrolytes, urinalysis, fluid balance, medication list, and imaging where obstruction is suspected.", "Treat reversible causes, adjust or withhold potentially harmful medicines when clinically appropriate, and monitor renal function and urine output.", "Urgent escalation is needed for refractory hyperkalemia, pulmonary edema, severe acidosis, uremic complications, rapidly worsening function, or suspected obstruction with complications."] }
+      ]
+    },
+    {
+      "heading": "4. Chronic Kidney Disease",
+      "blocks": [
+        { "type": "paragraph", "text": "Chronic kidney disease (CKD) is an abnormality of kidney structure or function persisting for at least three months with health implications. Classify by cause, eGFR category, and albuminuria using the locally adopted framework." },
+        { "type": "list", "items": ["Common causes include diabetes, hypertension, glomerular disease, structural disease, and inherited disorders.", "Assess progression, blood pressure, urine albumin, cardiovascular risk, anemia, bone-mineral complications, nutrition, and medicine dosing.", "Kidney-protective interventions depend on cause and patient factors; use current guidance and monitor renal function and electrolytes.", "Refer for rapid decline, heavy or persistent proteinuria/hematuria, resistant hypertension, uncertain cause, advanced CKD, or suspected systemic disease."] }
+      ]
+    },
+    {
+      "heading": "5. Common Urinary and Glomerular Syndromes",
+      "blocks": [
+        { "type": "list", "items": ["Urinary tract infection is diagnosed from symptoms and appropriate testing; fever, flank pain, sepsis, pregnancy, obstruction, or male sex may indicate complicated disease.", "Visible hematuria needs evaluation; persistent microscopic hematuria should be confirmed and assessed for renal and urological causes.", "Nephrotic syndrome features substantial proteinuria, low serum albumin, and edema; nephritic presentations often include hematuria, hypertension, and reduced kidney function.", "Acute urinary retention with pain, anuria, infection, or renal impairment requires urgent assessment for obstruction and safe bladder management."] }
+      ]
+    },
+    {
+      "heading": "6. Electrolyte and Fluid Emergencies",
+      "blocks": [
+        { "type": "callout", "tone": "danger", "title": "Severe electrolyte abnormalities can cause life-threatening arrhythmia or neurological injury", "items": ["Urgently assess severe potassium or sodium abnormalities, ECG changes, seizures, marked weakness, confusion, or hemodynamic instability.", "Confirm unexpected results and assess symptoms, ECG, renal function, medicines, and the rate of change without delaying emergency treatment when unstable.", "Follow current local protocols for correction and monitoring; overly rapid sodium correction can cause serious neurological harm.", "Consider specialist advice or renal replacement therapy assessment for selected refractory metabolic or volume complications."] }
+      ]
+    },
+    {
+      "heading": "OSCE and Viva Revision",
+      "blocks": [
+        { "type": "qa", "items": [{ "question": "What three broad mechanisms should be considered in acute kidney injury?", "answer": "Pre-renal reduced perfusion, intrinsic renal injury, and post-renal obstruction." }, { "question": "How long must a kidney abnormality persist to meet the chronicity criterion for CKD?", "answer": "At least three months, interpreted with evidence of kidney structure or function abnormality and health implications." }, { "question": "Name two urgent complications of kidney disease.", "answer": "Examples include refractory hyperkalemia, pulmonary edema/volume overload, severe acidosis, and uremic complications." }] },
+        { "type": "quiz", "question": "A patient with AKI has weakness, a markedly elevated potassium, and ECG changes. What is the priority?", "answer": "Treat as a life-threatening electrolyte emergency: arrange urgent monitored hospital care and follow the local hyperkalemia protocol." }
+      ]
+    }
+  ]
+}
